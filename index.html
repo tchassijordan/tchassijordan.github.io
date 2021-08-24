@@ -8,7 +8,9 @@
     <title>ijordan - Portfolio</title>
     <link href="https://fonts.googleapis.com/css?family=Lora|Ubuntu:300,400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
-    <script src="https://kit.fontawesome.com/b6173cb5aa.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/b6173cb5aa.js" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="../../Dev/front-end/fontawesome-free-5.15.2-web/css/all.css">
+    <link rel="stylesheet" href="../../Dev/front-end/fontawesome-free-5.15.2-web/css/fontawesome.min.css">
 </head>
 
 <body>
@@ -22,7 +24,7 @@
                 <ul class="nav-bar-links flex">
                     <li><a href="#">About Me</a></li>
                     <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -30,10 +32,12 @@
 
 
 
-    <main>
+    <main role="main">
         <div class="intro">
-            <h1>Bringing your Ideas to life</h1>
-            <p>Heyo, I am jordan. A junior front-end web developer, I love designing.</p>
+            <div class="container">
+                <h1>Bringing your Ideas to life</h1>
+                <p>Heyo, I am jordan. A junior front-end web developer, I love designing.</p>
+            </div>
         </div>
 
         <div class="container">
@@ -42,13 +46,58 @@
             </div>
 
             <div class="portfolio">
+                <ul class="portfolio-links flex">
+                    <li><a href="">All</a></li>
+                    <li><a href="">Websites</a></li>
+                    <li><a href="">Javascript Games</a></li>
+                </ul>
 
+                <div class="portfolio-websites">
+                    <div class="portfolio-item">
+                        <h2>Living the Social Life</h2>
+                        <img src="" alt="Living the Social Life">
+                    </div>
+                    <div class="portfolio-item">
+                        <h2>Atenna Signup</h2>
+                        <img src="" alt="Atenna Signup">
+                    </div>
+                </div>
+
+                <div class="portfolio-games">
+                    <div class="portfolio-item">
+                        <h2>Nokia3310 snake game</h2>
+                        <img src="" alt="Nokia3310 snake game">
+                    </div>
+                    <div class="portfolio-item">
+                        <h2>Pac-man</h2>
+                        <img src="" alt="Pac-man">
+                    </div>
+                    <div class="portfolio-item">
+                        <h2>Dice Game</h2>
+                        <img src="" alt="dice game">
+                    </div>
+                </div>
+                
             </div>
-
-            <div class="contact">
-                <form action=""></form>
+        </div>
+        <div class="contact" id="contact">
+            <div class="container">
+                <div class="contact-text">
+                    <h3>Contact</h3>
+                    <p>Reach out for any deals or a hire. Bring your awesome projects to life with me</p>
+                </div>
+                <form action="" class="contact-form flex">
+                    <label for="name">
+                        <input type="text" name="name" id="name" placeholder="Enter name">
+                    </label>
+                    <label for="email">
+                        <input type="email" name="email" id="email" placeholder="Enter email">
+                    </label>
+                    <textarea name="content" id="content" cols="30" rows="5"></textarea>
+                    <button type="submit" class="btn submit">Send</button>
+                </form>
             </div>
-
+            
         </div>
     </main>
 
@@ -59,8 +108,11 @@
                 <li><a href=""><i class="fab fa-facebook-square"></i></a></li>
                 <li><a href=""><i class="fab fa-instagram"></i></a></li>
                 <li><a href=""><i class="fab fa-twitter-square"></i></a></li>
-
             </ul>
+            <div class="credits flex">
+                <p>Tchassi Jordan </p>
+                <p>Copyright 2021</p>
+            </div>
         </div>
     </footer>
 
