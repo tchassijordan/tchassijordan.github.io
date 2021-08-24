@@ -5,11 +5,17 @@
 body {
     font-size: 1rem;
     margin: 0;
-    font-family: 'Ubuntu';
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    --brownish-white: rgba(235, 227, 157, 0.795);
+    --light-brownish-white: rgba(238, 236, 216, 0.959);
+    --white: rgb(255, 255, 255); 
 }
 
 img {
     max-width: 100%;
+    display: block;
 }
 
 /* ================= 
@@ -23,17 +29,36 @@ img {
     background: rgba(14, 13, 13, 0.938);
 }
 
-h1 {
+main {
     margin: 0;
-    font-size: 2rem;
-    color: White;
-    text-transform: uppercase;
-    font-weight: 700;
 }
 
 footer {
     margin: 0;
     background-color: black;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 1.5em;
+}
+
+h1,
+h3 {
+    margin: 0;
+    font-size: 2rem;
+    color: var(--white);
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1;
+}
+
+h3 {
+    font-size: 1.125rem;
+    /* margin: 2em; */
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
 }
 
 .container {
@@ -62,35 +87,35 @@ footer {
 }
 
 .nav-bar a,
-.icons-list a {
+.icons-list a,
+.portfolio-links a {
     text-decoration: none;
-    color: rgba(235, 227, 157, 0.795);
+    color: var(--brownish-white);
     font-weight: 700;
     text-transform: uppercase;
 }
 
+.nav-bar a {
+    letter-spacing: 1px;
+}
+
 .nav-bar-links a:hover, 
 .nav-bar-links a:focus {
-    color: white;
-    border-bottom: 3px solid white;
+    color: var(--white);
+    border-bottom: 3px solid var(--white);
     padding-bottom: .25em;
+    border-image: linear-gradient(to left, var(--white), var(--light-brownish-white)) 1;
 }
 
 .logo-section a {
-    color: rgba(238, 236, 216, 0.959);
+    color: var(--white);
 }
 
-.icons-list a {
-    color: black;
-}
 
-.icons-list {
-    padding: 0;
-}
 
 @media (min-width: 575px) {
     body {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
     }
 
     h1 {
@@ -99,6 +124,14 @@ footer {
     
     .container {
         max-width: 775px;
+    }
+
+    .nav-bar-links li {
+        margin-left: 2em;
+    }
+
+    .nav-bar a {
+        letter-spacing: 2px;
     }
 
     .intro p {
@@ -111,15 +144,142 @@ footer {
 /* ---------------
     MAIN CONTENT
    --------------- */
+
+/* --- INTRO --- */
+
 .intro {
-    color: white;
-    padding: 13em 0em;
+    color: var(--white);
+    padding: 15.75em 0em;
     text-align: center;
 }
 
 .intro  p {
     font-family: 'Lora', sans-serif;
 }
+
+@media (min-width: 575px) {
+    .intro {
+        padding: 10em 0em;
+    }
+}
+
+/* --- CONTACT --- */
+
+.contact {
+    padding: 2em 0em;
+    text-align: center;
+}
+
+.contact-text p {
+    margin: .5em 0;
+    color: var(--white);
+}
+
+.contact-form {
+    max-width: 420px;
+    padding: 1em;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.795);
+    box-shadow: 0px 0px 5px 2px black;
+}
+
+input,
+textarea {
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: .5em;
+    font-family: inherit;
+    background-color: rgba(37, 37, 37, 0.534);
+    color: white;
+    font-weight: 400;
+    line-height: 1.6;
+    width: 100%;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.btn {
+    color: var(--white);
+    padding: .65em 1.65em;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    max-width: 100px;
+    border: none;
+    border-radius: 5px;
+    margin: 0 auto;
+    background-color: rgba(85, 83, 83, 0.747);
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.submit {
+    margin-top: 1em;
+    background-image: linear-gradient(to left, #ff723a, #ffa51d);
+    transform: scale(1);
+    transition: transform 250ms;
+    
+}
+
+.submit:hover, 
+.submit:focus {
+    transform: scale(1.15);
+}
+
+@media (min-width: 575px) {
+    .contact-form {
+        padding: 2em 1em;
+    }
+
+    .contact-text p {
+        font-size: 1rem;
+        letter-spacing: 1.5px;
+    }
+}
+
+
+
+/* ---------------
+    FOOTER
+   --------------- */
+
+footer * {
+    margin: 0;
+}
+
+.icons-list a {
+    color: inherit;
+}
+
+.icons-list a:hover,
+.icons-list a:focus {
+    color: var(--brownish-white);
+}
+
+.credits p {
+    margin-top: .5em;
+    font-size: 1rem;
+}
+
+@media (min-width: 575px) {
+    footer {
+        font-size: 1.75rem;
+    }
+    
+    .credits {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .credits p {
+        font-size: 1.25rem;
+    }
+}
+
+
+
 
 
 
@@ -137,12 +297,41 @@ footer {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-color: rgba(59, 58, 58, 0.568);
+    background-color: rgba(43, 42, 42, 0.493);
     background-blend-mode: multiply; 
     height: 90vh;
+}
+
+.contact {
+    background-image: url("../images/dice.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(32, 32, 32, 0.61);
+    background-blend-mode: multiply; 
+}
+
+.contact-form {
+    flex-direction: column;
+    
 }
 
 .icons-list {
     justify-content: space-around;
 }
 
+.credits {
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+@media (min-width: 575px) {
+    .credits {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .credits p {
+        margin-right: 1.75em;
+    }
+}
