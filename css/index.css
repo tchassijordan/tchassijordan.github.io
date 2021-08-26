@@ -44,7 +44,7 @@ footer {
 h1,
 h3 {
     margin: 0;
-    font-size: 2rem;
+    font-size: 1.85rem;
     color: var(--white);
     text-transform: uppercase;
     font-weight: 700;
@@ -53,7 +53,10 @@ h3 {
 
 h3 {
     font-size: 1.125rem;
-    /* margin: 2em; */
+    font-family: 'URW Palladio L', 'Sahadeva', 'Rekha', sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: 2px;
 }
 
 ul {
@@ -88,7 +91,7 @@ ul {
 
 .nav-bar a,
 .icons-list a,
-.portfolio-links a {
+.portfolio-navigation a {
     text-decoration: none;
     color: var(--brownish-white);
     font-weight: 700;
@@ -100,15 +103,16 @@ ul {
 }
 
 .nav-bar-links a:hover, 
-.nav-bar-links a:focus {
+.nav-bar-links a:focus, 
+.contact-text h3 {
     color: var(--white);
     border-bottom: 3px solid var(--white);
-    padding-bottom: .25em;
-    border-image: linear-gradient(to left, var(--white), var(--light-brownish-white)) 1;
+    padding-bottom: .35em;
 }
 
 .logo-section a {
     color: var(--white);
+    font-size: .75rem;
 }
 
 
@@ -119,7 +123,7 @@ ul {
     }
 
     h1 {
-        font-size: 2rem;
+        font-size: 2.125rem;
     }
     
     .container {
@@ -154,7 +158,8 @@ ul {
 }
 
 .intro  p {
-    font-family: 'Lora', sans-serif;
+    font-family: 'URW Palladio L', 'aakar', sans-serif;
+    font-weight: 600;
 }
 
 @media (min-width: 575px) {
@@ -163,6 +168,51 @@ ul {
     }
 }
 
+/* --- ABOUT ME --- */
+
+.about-me {
+    padding: 2em 1em;
+    margin: 0;
+    background-color: #ffa51d;
+}
+
+
+
+
+/* --- PORTFOLIO --- */
+
+.portfolio {
+    margin: 2em 0em;
+}
+
+.portfolio-navigation {
+    background: #ffa51d;
+    margin: 0 auto;
+}
+
+.portfolio-navigation a {
+    font-size: .75rem;
+    padding: 1em;
+    color: black;
+    text-transform: capitalize;
+}
+
+.portfolio-navigation a:hover,
+.portfolio-navigation a:focus,
+.portfolio-navigation a:active,
+.active {
+    background-color: #ff723a;
+}
+
+@media (min-width: 575px) {
+    .portfolio-navigation a {
+        font-size: 1rem;
+    }
+}
+
+
+
+
 /* --- CONTACT --- */
 
 .contact {
@@ -170,7 +220,15 @@ ul {
     text-align: center;
 }
 
+.contact-text h3 {
+    display: inline-block;
+    font-size: 1.35rem;
+    padding-bottom: .1em;
+}
+
 .contact-text p {
+    font-family: 'URW Palladio L', 'aakar', sans-serif;
+    line-height: 1.35;
     margin: .5em 0;
     color: var(--white);
 }
@@ -183,6 +241,10 @@ ul {
     border-radius: 5px;
     background-color: rgba(0, 0, 0, 0.795);
     box-shadow: 0px 0px 5px 2px black;
+}
+
+.contact-form {
+    margin-top: 1.5em;
 }
 
 input,
@@ -198,6 +260,7 @@ textarea {
     width: 100%;
     margin-bottom: 1em;
     text-align: center;
+    outline: none;
 }
 
 .btn {
@@ -231,6 +294,11 @@ textarea {
 @media (min-width: 575px) {
     .contact-form {
         padding: 2em 1em;
+    }
+
+    .contact-text h3 {
+        font-size: 1.75rem;
+        padding-bottom: .1em;
     }
 
     .contact-text p {
@@ -292,23 +360,32 @@ footer * {
     justify-content: space-between;
 }
 
-.intro {
-    background-image: url("../images/basketball2.jpg");
+.intro, 
+.contact {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-color: rgba(43, 42, 42, 0.493);
+    background-color: rgba(22, 22, 22, 0.493);
     background-blend-mode: multiply; 
-    height: 90vh;
+}
+
+.intro {
+    background-image: url("../images/computer-screens.jpg");
+    height: calc(100vh - 3.95rem);
+}
+
+.portfolio-navigation {
+    justify-content: flex-start;
+    
+}
+
+.portfolio-navigation a {
+    display: block;
 }
 
 .contact {
     background-image: url("../images/dice.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     background-color: rgba(32, 32, 32, 0.61);
-    background-blend-mode: multiply; 
 }
 
 .contact-form {
