@@ -11,6 +11,7 @@ body {
     --brownish-white: rgba(235, 227, 157, 0.795);
     --light-brownish-white: rgba(238, 236, 216, 0.959);
     --white: rgb(255, 255, 255); 
+    --nav-bar-black: rgba(14, 13, 13, 0.938);
 }
 
 img {
@@ -26,7 +27,7 @@ img {
     font-size: 0.65rem;
     margin: 0;
     padding: 1.5em 0em;
-    background: rgba(14, 13, 13, 0.938);
+    background: var(--nav-bar-black)
 }
 
 main {
@@ -35,7 +36,7 @@ main {
 
 footer {
     margin: 0;
-    background-color: black;
+    background-color: var(--nav-bar-black);
     color: rgba(255, 255, 255, 0.8);
     text-align: center;
     padding: 1.5em;
@@ -44,7 +45,7 @@ footer {
 h1,
 h3 {
     margin: 0;
-    font-size: 1.85rem;
+    font-size: 1.5rem;
     color: var(--white);
     text-transform: uppercase;
     font-weight: 700;
@@ -53,7 +54,6 @@ h3 {
 
 h3 {
     font-size: 1.125rem;
-    font-family: 'URW Palladio L', 'Sahadeva', 'Rekha', sans-serif;
     font-weight: 700;
     font-style: italic;
     letter-spacing: 2px;
@@ -153,19 +153,21 @@ ul {
 
 .intro {
     color: var(--white);
-    padding: 15.75em 0em;
     text-align: center;
 }
+
+/* .intro h1 {
+    margin: auto;
+} */
 
 .intro  p {
     font-family: 'URW Palladio L', 'aakar', sans-serif;
     font-weight: 600;
+    /* margin: auto; */
 }
 
 @media (min-width: 575px) {
-    .intro {
-        padding: 10em 0em;
-    }
+    
 }
 
 /* --- ABOUT ME --- */
@@ -186,14 +188,14 @@ ul {
 }
 
 .portfolio-navigation {
-    background: #ffa51d;
+    background: var(--nav-bar-black);
     margin: 0 auto;
 }
 
 .portfolio-navigation a {
     font-size: .75rem;
     padding: 1em;
-    color: black;
+    color: var(--brownish-white);
     text-transform: capitalize;
 }
 
@@ -201,7 +203,11 @@ ul {
 .portfolio-navigation a:focus,
 .portfolio-navigation a:active,
 .active {
-    background-color: #ff723a;
+    color: var(--white);
+}
+
+.portfolio-item img {
+    image-rendering: optimizeQuality;
 }
 
 @media (min-width: 575px) {
@@ -216,7 +222,7 @@ ul {
 /* --- CONTACT --- */
 
 .contact {
-    padding: 2em 0em;
+    padding: 3.5em 0em;
     text-align: center;
 }
 
@@ -227,7 +233,6 @@ ul {
 }
 
 .contact-text p {
-    font-family: 'URW Palladio L', 'aakar', sans-serif;
     line-height: 1.35;
     margin: .5em 0;
     color: var(--white);
@@ -323,7 +328,7 @@ footer * {
 
 .icons-list a:hover,
 .icons-list a:focus {
-    color: var(--brownish-white);
+    color: rgba(238, 111, 227, 0.575);
 }
 
 .credits p {
@@ -374,6 +379,13 @@ footer * {
     height: calc(100vh - 3.95rem);
 }
 
+.intro .flex {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
 .portfolio-navigation {
     justify-content: flex-start;
     
@@ -403,6 +415,19 @@ footer * {
 }
 
 @media (min-width: 575px) {
+    .intro .flex {
+        flex-direction: row;
+    }
+
+    .intro h1 {
+        max-width: 300px;
+    }
+
+    /* .intro h1::after {
+        content: '|';
+        left: 100px;
+    } */
+
     .credits {
         flex-direction: row;
         justify-content: center;
