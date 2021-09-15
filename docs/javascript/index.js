@@ -5,6 +5,7 @@ const displayGamesPorfolio = document.getElementById("d-games");
 const web = document.querySelectorAll(".web");
 //convert my nodelist into an array
 const portfolioList = Array.from(portfolioItems);
+const form = document.getElementById('form');
 
 displayGamesPorfolio.addEventListener('click', ()=>{
     for(let i = 0; i < portfolioItems.length; i++) {
@@ -49,3 +50,8 @@ function displayAll() {
 }
 
 window.addEventListener('load', displayAll);
+
+form.addEventListener('submit', e => {
+    e.preventDefault()
+    alert('Please get to me using the icons below, contact encountered a malfunction');
+})
