@@ -81,7 +81,7 @@ ul {
 }
 
 .container {
-    width: 93%;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -181,13 +181,13 @@ ul {
 
 @media (min-width: 475px) {
     body {
-        font-size: 1.15rem;
+        font-size: 18.4px;
     }
 }
 
 @media (min-width: 750px) {
     body {
-        font-size: 1.35rem;
+        font-size: 21.6px;
     }
 }
 
@@ -404,7 +404,7 @@ ul {
 }
 
 .portfolio-item-decription-text {
-    font-family: 'Lora', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-size: .95rem;
     margin: 0 0 1rem;
     letter-spacing: 1px;
