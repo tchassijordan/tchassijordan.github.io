@@ -8,32 +8,46 @@
     <?xml version="1.0" encoding="utf-8"?>
     <title>ijordan - Portfolio</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora|Ubuntu:300,400,700&display=swap">
+    <link rel="stylesheet" href="../../icons/fontawesome-free-5.15.2-web/css/all.css">
+    <link rel="stylesheet" href="../../icons/fontawesome-free-5.15.2-web/css/fontawesome.min.css">
     <link rel="stylesheet" href="css/index.css">
-    <script src="https://kit.fontawesome.com/b6173cb5aa.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/b6173cb5aa.js" crossorigin="anonymous"></script> -->
 </head>
 
 <body>
     <header>
         <nav class="nav-bar">
-            <div class="container flex">
-                <div class="logo-section" id="logo-section">
-                    <a href="index.html">ijordan</a>
+            <div class="container">
+                <div class="flex">
+                    <div class="logo-section" id="logo-section">
+                        <a href="index.html">ijordan</a>
+                    </div>
+    
+                    <div class="slider flex" id="slider">
+                        <i class="fas fa-align-justify" id="open-slider"></i>
+                        <i class="fas fa-align-left" id="close-slider"></i>
+                        <i class="fas fa-tools" id="setting-top"></i>
+                    </div>
                 </div>
-
-                <ul class="nav-bar-links flex">
-                    <li class="nav-bar-about">
-                        About
-                        <ul class="nav-bar-about-nav">
-                            <li>
-                                <a href="#about-me">About Me</a>
-                            </li>
-                            <li>
-                                <a href="#services">Services</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                <ul class="nav-bar-links">
+                    <div class="flex">
+                        <li class="nav-bar-about">
+                            About
+                            <ul class="nav-bar-about-nav">
+                                <li>
+                                    <a class="link el" href="#about-me">About Me</a>
+                                </li>
+                                <li>
+                                    <a class="link el" href="#services">Services</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a class="link el" href="#portfolio">Portfolio</a></li>
+                        <li><a class="link el" href="#contact">Contact</a></li>
+                        <li><a class="link el" href="#articles">Articles</a></li>
+                        <li><a class="link el" href="#events">Events</a></li>
+                        <li class="link el" id="setting-bottom">Setting  <i class="fas fa-tools"></i></li>
+                    </div>
                 </ul>
             </div>
         </nav>
@@ -45,8 +59,7 @@
         <div class="intro">
             <div class="container flex">
                 <h1>Front end developer</h1>
-                <p>Heyo, It's jordan here. Am an enthausiastic and ambitious developer looking to conquer the web with
-                    my skills.</p>
+                <p>Heyo, It's jordan here. An ambitious developer looking to conquer the web with my skills.</p>
             </div>
         </div>
 
@@ -134,13 +147,7 @@
                 <h2 class="about-me-title">Portfolio</h2>
                 <ul class="portfolio-navigation flex">
                     <li id="d-all">All</li>
-                    <li id="d-web">Websites
-                        <!-- <ul class="d-web-nav">
-                        <li id="d-web">All</li>
-                        <li id="d-web-mp">Most Popular</li>
-                        <li id="d-web-rr">Recent Release</li>
-                    </ul> -->
-                    </li>
+                    <li id="d-web">Websites</li>
                     <li id="d-games">Javascript Games</li>
                 </ul>
 
