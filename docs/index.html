@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../../icons/fontawesome-free-5.15.2-web/css/all.css">
     <link rel="stylesheet" href="../../icons/fontawesome-free-5.15.2-web/css/fontawesome.min.css">
     <link rel="stylesheet" href="css/index.css">
-    <!-- <script src="https://kit.fontawesome.com/b6173cb5aa.js" crossorigin="anonymous"></script> -->
+    <script src="https://kit.fontawesome.com/b6173cb5aa.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -26,27 +26,42 @@
                     <div class="slider flex" id="slider">
                         <i class="fas fa-align-justify" id="open-slider"></i>
                         <i class="fas fa-align-left" id="close-slider"></i>
-                        <i class="fas fa-tools" id="setting-top"></i>
+                        <div class="setting-top-c">
+                            <i class="fas fa-tools" id="setting-top"></i>
+                            <ul class="setting-top-nav">
+                                <span class="setting-title">Themes</span>
+                                <li class="col-1 lock" id="light-theme-top">Light</li>
+                                <li class="col-1 lock" id="dark-theme-top">Dark</li> 
+                            </ul>
+                        </div>
+                        
                     </div>
                 </div>
                 <ul class="nav-bar-links">
                     <div class="flex">
                         <li class="nav-bar-about">
-                            About
+                            <span id="abt-txt">About</span>
                             <ul class="nav-bar-about-nav">
                                 <li>
-                                    <a class="link el" href="#about-me">About Me</a>
+                                    <a class="link el lock" href="#about-me">About Me</a>
                                 </li>
                                 <li>
-                                    <a class="link el" href="#services">Services</a>
+                                    <a class="link el lock" href="#services">Services</a>
                                 </li>
                             </ul>
                         </li>
-                        <li><a class="link el" href="#portfolio">Portfolio</a></li>
-                        <li><a class="link el" href="#contact">Contact</a></li>
-                        <li><a class="link el" href="#articles">Articles</a></li>
-                        <li><a class="link el" href="#events">Events</a></li>
-                        <li class="link el" id="setting-bottom">Setting  <i class="fas fa-tools"></i></li>
+                        <li><a class="link el lock" href="#portfolio">Portfolio</a></li>
+                        <li><a class="link el lock" href="#contact">Contact</a></li>
+                        <li><a class="link el lock" href="#articles">Articles</a></li>
+                        <li><a class="link el lock" href="#events">Events</a></li>
+                        <li class="link" id="setting-bottom">
+                            <span id="setting-bottom-btn">Setting  <i class="fas fa-tools setting-bottom-i"></i></span>
+                            <ul class="setting-bottom-nav">
+                                <span class="setting-title">Themes</span>
+                                <li class="col-1 lock" id="light-theme">Light</li>
+                                <li class="col-1 lock" id="dark-theme">Dark</li> 
+                            </ul>
+                        </li>
                     </div>
                 </ul>
             </div>
@@ -219,13 +234,13 @@
                                 including myself. In vue of taking my web devlopment skills to the next level and
                                 building my experience, I came to the conclusion that
                                 could only be done through practicing and realizing projects. So I built my web app
-                                version of <strong>Pac-man</strong>. I encountered so many
+                                version of Pac-man. I encountered so many
                                 challenges while building this dope game such as implementing object oriented
                                 programming in javascript. I fell on <a href="https://scrimba.com">Scrimba</a>
                                 who has very good courses for juniors like myself, and they even have one on building
                                 the pac-man game from scratch. I profited a lot from them
                                 and that helped me rounding off this game.
-                                I built <strong>Pac-man</strong> using <strong>javascript</strong>.
+                                I built Pac-man using <strong>javascript</strong>.
                             </p>
                             <div class="portfolio-item-decription-btns flex">
                                 <a href="https://github.com/tchassijordan/pac-man" class="btn code-btn">View Code</a>
@@ -259,7 +274,7 @@
     <footer>
         <div class="container">
             <ul class="icons-list flex">
-                <li><a href="mailto:tchassijordan@gmail.com"><i class="far fa-paper-plane"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/idriss-jordan"><i class="fab fa-linkedin"></i></a></li>
                 <li><a href="https://github.com/tchassijordan/"><i class="fab fa-github"></i></a></li>
                 <li><a href="https://facebook.com/tchassijordan"><i class="fab fa-facebook-square"></i></a></li>
                 <li><a href="https://instagram.com/tchassi_jordan"><i class="fab fa-instagram"></i></a></li>

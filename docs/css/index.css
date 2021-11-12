@@ -1,20 +1,29 @@
 * {
     box-sizing: border-box;
+    transition: 300ms;
 }
 
 :root {
+    --dark-blue: rgba(13, 25, 38, 1);
+    --light-blue: rgba(25,50,76,1);
+    --light-blue-skl: rgba(59, 89, 141, 0.144);
     --brownish-white: rgba(235, 227, 157, 0.795);
+    --brownish-white-nh: rgba(235, 227, 157);
     --light-brownish-white: rgba(238, 236, 216, 0.959);
-    --white: rgb(255, 255, 255);
     --nav-bar-black: rgba(14, 13, 13, 0.938);
-    --nav-bar-purple: rgba(39, 0, 39, 0.87);
-    --circles-c: rgb(255, 255, 255); 
-    --about-bg: rgba(25,50,76,1);
+    --nav-bar-black-light: rgb(27, 27, 27);
+    --nav-bar-purple: var(--portfolio-bg);
     --white-gn: rgba(56, 185, 1, 0.959);
-    --portfolio-bg: rgba(13, 25, 38, 1);
     --light-gray: rgba(207, 206, 186, 0.151);
-    /* animation */
-    --expand: expand;
+    --white: rgb(255, 255, 255);
+    --nav-txt-col: var(--brownish-white);
+    --nav-bg: var(--nav-bar-black);
+    --about-bg: var(--light-blue);
+    --portfolio-bg: var(--dark-blue);
+    --skills-bg: var(--light-gray);
+    --footer-bg: var(--nav-bar-black);
+    --footer-txt-col: rgba(255, 255, 255, 0.8);
+    --setting-bg: var(--nav-bar-black-light);
 }
 
 body {
@@ -44,8 +53,8 @@ main {
 footer {
     grid-row: -2 / -1;
     margin: 0;
-    background-color: var(--nav-bar-black);
-    color: rgba(255, 255, 255, 0.8);
+    background-color: var(--footer-bg);
+    color: var(--footer-txt-col);
     text-align: center;
     padding: 1.85em;
 }
@@ -78,7 +87,7 @@ img {
     font-size: 0.65rem;
     margin: 0;
     padding: 1.5em 0em;
-    background: var(--nav-bar-black);
+    background: var(--nav-bg);
 }
 
 h1, h3 {
@@ -128,10 +137,9 @@ ul {
 .nav-bar-about, 
 .portfolio-navigation li {
     text-decoration: none;
-    color: var(--brownish-white);
+    color: var(--nav-txt-col);
     font-weight: 700;
     text-transform: uppercase;
-    transition: 300ms;
 }
 
 .nav-bar a, .nav-bar-about {
@@ -139,7 +147,11 @@ ul {
 }
 
 .link:hover, 
-.link:focus {
+.link:focus,
+#abt-txt:hover, 
+#abt-txt:focus,
+.col-1:hover,
+.col-1:focus {
     color: var(--white);
     border-bottom: 1px solid var(--white);
     padding-bottom: .25em;
@@ -156,6 +168,7 @@ ul {
 }
 
 .nav-bar-about-nav {
+    margin-top: 0.35em;
     padding: .35em 1em 1em;
 }
 
@@ -177,6 +190,19 @@ ul {
 #setting-bottom {
     letter-spacing: 2px;
     cursor: pointer;
+}
+
+#setting-top,
+.setting-bottom-i {
+    transform: rotate(0deg);
+}
+
+#setting-top:hover,
+#setting-top:focus,
+.spin,
+#setting-bottom:hover .setting-bottom-i,
+#setting-bottom-i:focus .setting-bottom-i {
+    animation: spin 10s linear infinite;
 }
 
 @media (min-width: 575px) {
@@ -219,6 +245,10 @@ ul {
     body {
         font-size: 21.6px;
     }
+
+    .nav-bar-about-nav .link {
+        font-size: 0.55rem;
+    }
 }
 
 /* ---------------
@@ -228,7 +258,7 @@ ul {
 /* --- INTRO --- */
 
 .intro {
-    color: var(--white);
+    color: rgb(255, 255, 255);
     text-align: center;
 }
 
@@ -237,6 +267,7 @@ ul {
     padding-bottom: .5em;
     display: inline;
     opacity: .75;
+    color: rgb(255, 255, 255);
 }
 
 .intro p {
@@ -273,7 +304,6 @@ ul {
     position: relative;
     height: 1px;
     background-color: rgb(59, 89, 141);
-    /* background-color: rgb(255, 255, 255); */
 }
 
 .about-me-title::after {
@@ -284,14 +314,15 @@ ul {
 
 .about-me-text,
 .services-list {
-    opacity: 0.8;
+    /* opacity: 0.8; */
+    opacity: 1;
     color: var(--white);
     letter-spacing: 1px;
     font-size: 0.95rem;
 }
 
 .about-me-skills-container {
-    background-color: var(--light-gray);
+    background-color: var(--skills-bg);
     border-radius: 7px;
     padding: 1em;
     margin-top: 1.35em;
@@ -393,7 +424,6 @@ ul {
 .portfolio-navigation li {
     font-size: .775rem;
     padding: 1em;
-    color: var(--brownish-white);
     text-transform: capitalize;
     cursor: pointer;
     letter-spacing: 1px;
@@ -405,17 +435,12 @@ ul {
     background-color: var(--light-gray);
     padding: 2.5em 1.5em;
     border-radius: 10px;
-    opacity: 0.65;
-    transition: 300ms;
-}
-
-.portfolio-item:hover {
-    box-shadow: 0px 0px 10px 0px black;
 }
 
 .portfolio-item:hover, 
 .portfolio-item:focus {
     opacity: 1;
+    box-shadow: 0px 0px 7px 0px black;
 }
 
 .portfolio-item:first-child {
@@ -451,14 +476,12 @@ ul {
 }
 
 .portfolio-item-decription-text a {
-    text-decoration: none;
-    color: var(--white-gn);
+    color: var(--white);
     font-weight: 700;
-    transition: 300ms;
 }
 
 .portfolio-item-decription-text a:hover {
-    color: var(--brownish-white);
+    color: rgba(182, 172, 172, 0.555);
 }
 
 .code-btn {
@@ -618,9 +641,6 @@ footer * {
     background-position: center;
     background-color: rgba(22, 22, 22, 0.493);
     background-blend-mode: multiply;
-}
-
-.intro {
     background-image: url("../images/computer-screens.jpg");
     height: calc(100vh - 3.95rem);
 }
@@ -646,10 +666,11 @@ footer * {
     display: none;
     z-index: 5;
     left: 0;
+    top: 66px;
     position: absolute;
     width: 100%;
     height: calc(100vh - 3.125rem);
-    background-color: var(--nav-bar-black);
+    background-color: var(--nav-bg);
 }
 
 .in {
@@ -659,6 +680,23 @@ footer * {
 .out {
     animation: hide 300ms ease;
     display: none;
+}
+
+.el {
+    color: var(--white);
+}
+
+.el-b {
+    border: none;
+}
+
+.light {
+    opacity: 1;
+    box-shadow: 0px 0px 3px 0px black;
+}
+
+.el-g {
+    color: var(--white-gn);
 }
 
 @keyframes expand {
@@ -679,6 +717,70 @@ footer * {
     }
 }
 
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.setting-top-c,
+#setting-bottom {
+    position: relative;
+}
+
+.setting-top-nav,
+.setting-bottom-nav {
+    display: none;
+    position: absolute;
+    background-color: var(--setting-bg);
+    color: var(--brownish-white);
+    z-index: 500;
+    padding: 2em 2em 1em;
+    right: 0;
+    box-shadow: 0px 0px 5px 0.2px black;
+    cursor: default;
+}
+
+.setting-title {
+    margin-bottom: 0.75em;
+    display: block;
+    color: var(--nav-txt-col);
+    text-transform: uppercase;
+    font-size: 700;
+    letter-spacing: 2px; 
+    padding-bottom: 0.25em;
+    border-bottom: 1.5px solid var(--white);  
+    border-image: linear-gradient(to left, red, blue) 1;
+}
+
+.setting-bottom-btn {
+    display: block;
+}
+
+.col-1 {
+    margin: 0 0 0.35em 0 !important;
+    letter-spacing: 1px;
+    color: var(--nav-txt-col);
+    font-size: 0.55rem;
+    font-weight: 700;
+    display: inline-block;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    
+}
+
+.col-1:first-of-type,
+.col-1:last-of-type {
+    border-bottom: 1.5px solid var(--white);
+    padding-bottom: .25em;
+    border-image: linear-gradient(to right, black, white) 1;
+}
+
+.col-1:last-of-type {
+    border-image: linear-gradient(to left, black, white) 1;
+}
+
 .about-me-skills .flex {
     flex-direction: row;
     flex-wrap: wrap;
@@ -692,9 +794,7 @@ footer * {
     justify-content: flex-start;
 }
 
-.portfolio-navigation a,
-.nav-bar-about:hover .nav-bar-about-nav, 
-.nav-bar-about:focus .nav-bar-about-nav {
+.portfolio-navigation a {
     display: block;
 }
 
@@ -707,8 +807,9 @@ footer * {
 .nav-bar-about-nav {
     display: none;
     position: relative;
-    background-color: var(--nav-bar-black);
+    background-color: var(--setting-bg);
     transition: all 3s;
+    box-shadow: 0px 0px 5px 0.2px black;
 }
 
 .portfolio-navigation.flex {
@@ -750,7 +851,7 @@ footer * {
     .intro h1 {
         width: 45%;
         border-bottom: none;
-        border-right: 1px solid var(--white);
+        border-right: 1px solid rgb(255, 255, 255);
         padding: 0 .5em;
     }
 
@@ -786,7 +887,7 @@ footer * {
         margin-top: 0;
     }
 
-    .nav-bar li {
+    .nav-bar > li {
         margin: 0;
         margin-right: 2em;
     }
@@ -812,6 +913,7 @@ footer * {
         background-color: inherit;
         position:relative;
         height: 100%;
+        top: 0;
     }
 
     .nav-bar-links .flex {

@@ -2,6 +2,7 @@ const portfolioItems = document.querySelectorAll('.portfolio-item');
 const displayAllPortfolio = document.getElementById("d-all");
 const displayWebPorfolio = document.getElementById("d-web");
 const displayGamesPorfolio = document.getElementById("d-games");
+const portfolioNavLinks = [...document.querySelectorAll('.portfolio-navigation li')];
 const web = document.querySelectorAll(".web");
 const portfolioList = Array.from(portfolioItems); //convert my nodelist into an array
 let isAll = false;
@@ -11,11 +12,48 @@ const navLinks = document.querySelector(".nav-bar-links");
 const root = document.querySelector(":root");
 const rootStyles = getComputedStyle(root);
 const activePortfolioNav = rootStyles.getPropertyValue('--white-gn');
-const inActivePortfolioNav = rootStyles.getPropertyValue('--brownish-white');
 const openSlider = document.getElementById("open-slider");
 const closeSlider = document.getElementById("close-slider");
 let navIsActive = false;
 const h = document.querySelector("header");
+let aboutIsActive = false;
+const abtController = document.getElementById("abt-txt");
+const abtNav = document.querySelector('.nav-bar-about-nav');
+const topSettingIcon = document.getElementById('setting-top');
+const topSettingNav = document.querySelector('.setting-top-nav');
+let settingIsActive = false;
+const bottomSettingBtn = document.getElementById('setting-bottom-btn');
+const bottomSettingBtnIcon = document.querySelector('.setting-bottom-i');
+const bottomSettingNav = document.querySelector('.setting-bottom-nav');
+let settingBelowIsActive = false;
+const setLightTheme = document.getElementById("light-theme");
+const setDarkTheme = document.getElementById("dark-theme");
+const setLightThemeTop = document.getElementById("light-theme-top");
+const setDarkThemeTop = document.getElementById("dark-theme-top");
+let isLight = false;
+let isDark = false;
+const rs = root.style;
+const locker = [...document.querySelectorAll('.lock')];
+
+function closeNav() {
+    h.classList.remove('fullNav');
+    if(window.innerWidth < 726) {
+        navIsActive = false;
+        handleNavbar();
+        setTimeout(()=> {
+            navLinks.style.display  = "none"}, 300);
+    };
+    setTimeout(()=> bottomSettingNav.style.display  = "none", 300);
+    setTimeout(()=> topSettingNav.style.display  = "none", 300);
+    setTimeout(()=> abtNav.style.display  = "none", 300);
+    aboutIsActive = false;
+    settingIsActive = false;
+    settingBelowIsActive = false;
+    handleAboutNav();
+    handleSetting();
+}
+
+locker.forEach(item => item.addEventListener('click', closeNav));
 
 openSlider.addEventListener('click', () => {
     navIsActive = !navIsActive
@@ -46,13 +84,117 @@ function handleNavbar() {
     }
 }
 
+function handleAboutNav() {
+    if(aboutIsActive) {
+        abtController.classList.add('el');
+        abtNav.classList.remove('out');
+        abtNav.classList.add('in');
+        abtNav.style.display = "block";
+    } else {
+        abtController.classList.remove('el');
+        abtNav.classList.remove('in');
+        abtNav.classList.add('out');
+        setTimeout(()=> abtNav.style.display  = "none", 300);
+    }
+}
+
+abtController.addEventListener('click', ()=>{
+    aboutIsActive = !aboutIsActive;
+    handleAboutNav();
+})
+
+function handleSetting() {
+    if (settingIsActive) {
+        topSettingIcon.classList.add('el', 'spin');
+        topSettingNav.classList.remove('out');
+        topSettingNav.classList.add('in');
+        topSettingNav.style.display = "block";
+    } else if (!settingIsActive) {
+        topSettingIcon.classList.remove('el', 'spin');
+        topSettingNav.classList.remove('in');
+        topSettingNav.classList.add('out');
+        setTimeout(()=> topSettingNav.style.display  = "none", 300);
+    }
+    
+    if (settingBelowIsActive) {
+        bottomSettingBtn.classList.add('el', 'el-b');
+        bottomSettingBtnIcon.classList.add('spin');
+        bottomSettingNav.classList.remove('out');
+        bottomSettingNav.classList.add('in');
+        bottomSettingNav.style.display = "block";
+    } else if (!settingBelowIsActive) {
+        bottomSettingBtn.classList.remove('el', 'el-b');
+        bottomSettingBtnIcon.classList.remove('spin');
+        bottomSettingNav.classList.remove('in');
+        bottomSettingNav.classList.add('out');
+        setTimeout(()=> bottomSettingNav.style.display  = "none", 300);
+    }
+
+    if (isLight) {
+        portfolioList.map(item => item.classList.add('light'));
+        rs.setProperty('--white', 'var(--nav-bar-black)');
+        rs.setProperty('--nav-txt-col', 'var(--white)');
+        rs.setProperty('--nav-bg', 'var(--brownish-white-nh)');
+        rs.setProperty('--about-bg', 'var(--light-brownish-white)');
+        rs.setProperty('--portfolio-bg', 'whitesmoke');
+        rs.setProperty('--skills-bg', 'var(--light-blue-skl)');
+        rs.setProperty('--footer-bg', 'var(--brownish-white-nh)');
+        rs.setProperty('--setting-bg', 'var(--light-brownish-white)');
+        rs.setProperty('--footer-txt-col', 'var(--nav-bar-black-light)');
+    } else if (isDark) {
+        portfolioList.map(item => item.classList.remove('light'));
+        rs.setProperty('--white', 'rgb(255, 255, 255');
+        rs.setProperty('--nav-txt-col', 'var(--brownish-white)');
+        rs.setProperty('--nav-bg', 'var(--nav-bar-black)');
+        rs.setProperty('--about-bg', 'var(--light-blue)');
+        rs.setProperty('--portfolio-bg', 'var(--dark-blue)');
+        rs.setProperty('--skills-bg', 'var(--light-gray)');
+        rs.setProperty('--footer-bg', 'var(--nav-bar-black)');
+        rs.setProperty('--setting-bg', 'var(--nav-bar-black-light)');
+        rs.setProperty('--footer-txt-col', 'rgba(255, 255, 255, 0.8)');
+    }
+}
+
+topSettingIcon.addEventListener('click', ()=>{
+    settingIsActive = !settingIsActive;
+    handleSetting();
+});
+
+bottomSettingBtn.addEventListener('click' , () => {
+    settingBelowIsActive = !settingBelowIsActive;
+    handleSetting();
+});
+
+setDarkTheme.addEventListener('click', ()=> {
+    isLight = false;
+    isDark = !isLight;
+    handleSetting();
+});
+
+setLightTheme.addEventListener('click', ()=> {
+    isDark = false;
+    isLight = !isLight;
+    handleSetting();
+});
+
+setDarkThemeTop.addEventListener('click', ()=> {
+    isLight = false;
+    isDark = !isLight;
+    handleSetting();
+});
+
+setLightThemeTop.addEventListener('click', ()=> {
+    isDark = false;
+    isLight = !isLight;
+    handleSetting();
+});
+
 function setInitial() {
+    aboutIsActive = false;
     isAll = false;
     isWebsite = false;
     isGames = false;
-    displayAllPortfolio.style.color = inActivePortfolioNav;
-    displayGamesPorfolio.style.color = inActivePortfolioNav;
-    displayWebPorfolio.style.color = inActivePortfolioNav;
+    portfolioNavLinks.map(item => item.style.color = 'var(--nav-txt-col)');
     portfolioList.map(item => item.style.display = "none");
 }
 
