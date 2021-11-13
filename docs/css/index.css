@@ -192,6 +192,10 @@ ul {
     cursor: pointer;
 }
 
+#setting-top {
+    margin-right: 2em;
+}
+
 #setting-top,
 .setting-bottom-i {
     transform: rotate(0deg);
@@ -757,7 +761,6 @@ footer * {
     letter-spacing: 2px; 
     padding-bottom: 0.25em;
     border-bottom: 1.5px solid var(--white);  
-    border-image: linear-gradient(to left, red, blue) 1;
 }
 
 .setting-bottom-btn {
@@ -781,11 +784,6 @@ footer * {
 .col-1:last-of-type {
     border-bottom: 1.5px solid var(--white);
     padding-bottom: .25em;
-    border-image: linear-gradient(to right, black, white) 1;
-}
-
-.col-1:last-of-type {
-    border-image: linear-gradient(to left, black, white) 1;
 }
 
 .about-me-skills .flex {
