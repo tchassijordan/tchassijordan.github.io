@@ -16,6 +16,7 @@ const openSlider = document.getElementById("open-slider");
 const closeSlider = document.getElementById("close-slider");
 let navIsActive = false;
 const h = document.querySelector("header");
+const f = document.querySelector("footer");
 let aboutIsActive = false;
 const abtController = document.getElementById("abt-txt");
 const abtNav = document.querySelector('.nav-bar-about-nav');
@@ -141,6 +142,9 @@ function handleSetting() {
         rs.setProperty('--footer-bg', 'var(--brownish-white-nh)');
         rs.setProperty('--setting-bg', 'var(--light-brownish-white)');
         rs.setProperty('--footer-txt-col', 'var(--nav-bar-black-light)');
+        rs.setProperty('--light-gray', 'rgba(207, 206, 186, 0.288)');
+        f.classList.remove('dark-f');
+        f.classList.add('light-f');
     } else if (isDark) {
         portfolioList.map(item => item.classList.remove('light'));
         rs.setProperty('--white', 'rgb(255, 255, 255');
@@ -152,6 +156,9 @@ function handleSetting() {
         rs.setProperty('--footer-bg', 'var(--nav-bar-black)');
         rs.setProperty('--setting-bg', 'var(--nav-bar-black-light)');
         rs.setProperty('--footer-txt-col', 'rgba(255, 255, 255, 0.8)');
+        rs.setProperty('--light-gray', 'rgba(207, 206, 186, 0.062)');
+        f.classList.remove('light-f');
+        f.classList.add('dark-f');
     }
 }
 

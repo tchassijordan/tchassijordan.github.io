@@ -14,7 +14,7 @@
     --nav-bar-black-light: rgb(27, 27, 27);
     --nav-bar-purple: var(--portfolio-bg);
     --white-gn: rgba(56, 185, 1, 0.959);
-    --light-gray: rgba(207, 206, 186, 0.151);
+    --light-gray: rgba(207, 206, 186, 0.062);
     --white: rgb(255, 255, 255);
     --nav-txt-col: var(--brownish-white);
     --nav-bg: var(--nav-bar-black);
@@ -298,7 +298,8 @@ ul {
 
 .about-me-title::after,
 .about-me h3::before, 
-.about-me h3::after {
+.about-me h3::after,
+.article-title::after {
     content: "";
     display: block;
     position: relative;
@@ -306,7 +307,8 @@ ul {
     background-color: rgb(59, 89, 141);
 }
 
-.about-me-title::after {
+.about-me-title::after,
+.article-title::after {
     width: 50vw;
     left: 110px;
     top: -15px;
@@ -435,12 +437,7 @@ ul {
     background-color: var(--light-gray);
     padding: 2.5em 1.5em;
     border-radius: 10px;
-}
-
-.portfolio-item:hover, 
-.portfolio-item:focus {
-    opacity: 1;
-    box-shadow: 0px 0px 7px 0px black;
+    box-shadow: 0px 0px 1px 0px black;
 }
 
 .portfolio-item:first-child {
@@ -692,11 +689,21 @@ footer * {
 
 .light {
     opacity: 1;
-    box-shadow: 0px 0px 3px 0px black;
+    box-shadow: 0px 0px 1px 0px black;
 }
 
 .el-g {
     color: var(--white-gn);
+}
+
+.light-f {
+    background: rgb(238,236,216);
+    background: linear-gradient(180deg, rgba(238,236,216,0.96) 0%, rgba(230, 219, 153, 0.795) 100%);
+}
+
+.dark-f {
+    background: var(--nav-bar-black);
+    background: linear-gradient(180deg, var(--about-bg) 0%, var(--nav-bar-black) 100%);
 }
 
 @keyframes expand {
