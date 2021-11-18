@@ -51,15 +51,15 @@
                             </ul>
                         </li>
                         <li><a class="link el lock" href="#portfolio">Portfolio</a></li>
-                        <li><a class="link el lock" href="#contact">Contact</a></li>
                         <li><a class="link el lock" href="#articles">Articles</a></li>
                         <li><a class="link el lock" href="#events">Events</a></li>
+                        <li><a class="link el lock" href="#contact">Contact</a></li>
                         <li class="link" id="setting-bottom">
                             <span id="setting-bottom-btn">Setting  <i class="fas fa-tools setting-bottom-i"></i></span>
                             <ul class="setting-bottom-nav">
                                 <span class="setting-title">Themes</span>
-                                <li class="col-1 lock" id="light-theme">Light</li>
-                                <li class="col-1 lock" id="dark-theme">Dark</li> 
+                                <li class="col-1 lock col-2" id="light-theme">Light</li>
+                                <li class="col-1 lock col-2" id="dark-theme">Dark</li> 
                             </ul>
                         </li>
                     </div>
@@ -82,7 +82,7 @@
         <div class="about" id="about-me">
             <div class="container">
                 <div class="about-me">
-                    <h2 class="about-me-title">About Me</h2>
+                    <h2 class="title">About Me</h2>
                     <div class="about-me-text">
                         I am called <span>Tchassi Jordan</span>, a junior front end web developer.
                         I love playing basketball, programming & solving everyday shortcommings with lines of code,
@@ -138,7 +138,7 @@
 
                 </div>
                 <div class="about-services" id="services">
-                    <h2 class="about-me-title">Services</h2>
+                    <h2 class="title services-title">Services</h2>
                     <ol class="services-list">
                         <li>Designing & Building Websites</li>
                         <li>Building Web apps</li>
@@ -159,7 +159,7 @@
 
         <div class="portfolio" id="portfolio">
             <div class="container">
-                <h2 class="about-me-title">Portfolio</h2>
+                <h2 class="title portfolio-title">Portfolio</h2>
                 <ul class="portfolio-navigation flex">
                     <li id="d-all">All</li>
                     <li id="d-web">Websites</li>
@@ -173,7 +173,7 @@
                         </a>
                         <div class="portfolio-item-decription flex">
                             <div class="date">August - 2021</div>
-                            <h2 class="portfolio-item-decription-title">Living the Simple Life</h2>
+                            <h3 class="portfolio-item-decription-title">Living the Simple Life</h3>
                             <p class="portfolio-item-decription-text">
                                 <strong>Living the Simple Life</strong> is a website I realized with the goal of
                                 bettering my responsive design skills. The website consist's
@@ -199,7 +199,7 @@
                         </a>
                         <div class="portfolio-item-decription">
                             <div class="date">August - 2021</div>
-                            <h2 class="portfolio-item-decription-title">Nokia3310 Snake Game</h2>
+                            <h3 class="portfolio-item-decription-title">Nokia3310 Snake Game</h3>
                             <p class="portfolio-item-decription-text">
                                 Growing up I was a big fan of Nokia's 3310 snake game which were pre-installed in nokia
                                 phones of the early
@@ -227,7 +227,7 @@
                         </a>
                         <div class="portfolio-item-decription">
                             <div class="date">August - 2021</div>
-                            <h2 class="portfolio-item-decription-title">Pac-man</h2>
+                            <h3 class="portfolio-item-decription-title">Pac-man</h3>
                             <p class="portfolio-item-decription-text">
                                 <strong>Pac-man</strong> is arguably the most famous game of the 1980s. It was a source
                                 of ecstasy for generations of people,
@@ -258,9 +258,58 @@
             </svg>
         </div>
 
+        <div class="article-c" id="articles">
+            <div class="container">
+                <h2 class="title articles-title">Articles</h2>
+                <p class="article-text">
+                    I write on important features or topics that halt me on my coding journey.  
+                </p>
+                <div class="articles">
+                    <div class="article-item">
+                        <a href="##">
+                            <img class="article-item-image" src="./images/react-logo.png" alt="react logo" >
+                        </a>
+                        <div class="article-item-description flex">
+                            <h3 class="article-item-title">How to create a react carousel app</h3>
+                            <p class="article-item-text">
+                                In this article I simplied the process of creating your first react app, how to create a custom react hook. 
+                                Using that hook to create a carousel app. 
+                            </p>
+                            <a class="btn article-btn" href="">View Article→</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="event-c" id="events">
+            <div class="container">
+                <h2 class="title event-title">Events</h2>
+                <h4 class="event-item-mini-title">Featured Talks 🎤</h4>
+                <p class="event-text">
+                    Being the co-Lead of the <a href="https://gdsc.community.dev/yaounde-i-university/" target="_blank" rel="noopener noreferrer">Google Developer Student Club Yaoundé I</a>, I participate in practical event/study jams we organize every saturday
+                    on google technologies and equally the trending technologies in the industry. 
+                </p>
+                <div class="events">
+                    <div class="event-item">
+                        <a href="##">
+                            <img class="event-item-image" src="./images/git&github_flyer.jpg" alt="react logo" >
+                        </a>
+                        <div class="event-item-description flex">
+                            <h3 class="event-item-title">Practical discovery of Git & GitHub</h3>
+                            <p class="event-item-text">
+                                This was purely a practical event in which the other speakers and I talked about version control systems(notably Git) and corresponding hosting services like GitHub and their advantages. How to kickoff using them in your projects. 
+                            </p>
+                            <a class="btn gallery-btn" href="https://photos.google.com/share/AF1QipOmQA43xoI7PoCWqRdva-2eSJcttufTPsNZvZZbNSzwd2t6Xoc7CG-AjtFzfUcLUQ?key=TjBJaWFYNFFKRWUyOTZWMFRKMVFOa2owb0Z6ZmR3">Event Gallery→</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="contact" id="contact">
             <div class="container">
-                <h2 class="about-me-title contact-t">Contact Me</h2>
+                <h2 class="title contact-t">Contact Me</h2>
                 <p class="contact-text">
                     Do you need a competent and motivated developer for your projects?
                     <br>

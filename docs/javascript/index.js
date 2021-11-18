@@ -143,6 +143,7 @@ function handleSetting() {
         rs.setProperty('--setting-bg', 'var(--light-brownish-white)');
         rs.setProperty('--footer-txt-col', 'var(--nav-bar-black-light)');
         rs.setProperty('--light-gray', 'rgba(207, 206, 186, 0.288)');
+        rs.setProperty('--article-bg', 'var(--light-gray)');
         f.classList.remove('dark-f');
         f.classList.add('light-f');
     } else if (isDark) {
@@ -157,6 +158,7 @@ function handleSetting() {
         rs.setProperty('--setting-bg', 'var(--nav-bar-black-light)');
         rs.setProperty('--footer-txt-col', 'rgba(255, 255, 255, 0.8)');
         rs.setProperty('--light-gray', 'rgba(207, 206, 186, 0.062)');
+        rs.setProperty('--article-bg', 'var(--portfolio-bg)');
         f.classList.remove('light-f');
         f.classList.add('dark-f');
     }
