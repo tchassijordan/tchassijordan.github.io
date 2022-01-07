@@ -9,6 +9,9 @@
     <title>ijordan - Portfolio</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora|Ubuntu:300,400,700&display=swap">
     <link rel="stylesheet" href="css/index.css">
+    <!-- Remember to remove the links to local fontawesome before you push to github -->
+    <!-- <link rel="stylesheet" href="../../icons/fontawesome-free-5.15.2-web/css/all.css">
+    <link rel="stylesheet" href="../../icons/fontawesome-free-5.15.2-web/css/fontawesome.min.css"> -->
     <script src="https://kit.fontawesome.com/b6173cb5aa.js" crossorigin="anonymous"></script>
 </head>
 
@@ -163,41 +166,53 @@
 
                 <div class="portfolio-websites flex" id="p-websites">
                     <div class="portfolio-item web recent">
-                        <a href="http://ijordan.tech/living-the-social-life/">
-                            <img class="portfolio-website-img" src="./images/work.jpg" alt="Living the Social Life">
-                        </a>
-                        <div class="portfolio-item-decription flex">
-                            <div class="date">August - 2021</div>
-                            <h3 class="portfolio-item-decription-title">Living the Simple Life</h3>
-                            <p class="portfolio-item-decription-text">
-                                <strong>Living the Simple Life</strong> is a website I built with responsive design in mind. The website consist's
-                                of three pages; a home page, an about page and a recent post
-                                page. In this project I built a pixel
-                                perfect website that is responsive across multiple devices, mobiles and desktop/laptop devices.
-                            </p>
-                            <div class="portfolio-item-decription-btns flex">
-                                <a href="https://github.com/tchassijordan/living-the-social-life"
-                                    class="btn code-btn">View Code</a>
-                                <a href="http://ijordan.tech/living-the-social-life/" class="btn deployment-btn">Live
-                                    View</a>
+                        <div class="flex-p">
+                            <a class="portfolio-item-img-container" href="http://ijordan.tech/living-the-social-life/">
+                                <img class="portfolio-img" src="./images/work.jpg" alt="Living the Social Life">
+                            </a>
+                            <div class="portfolio-item-decription">
+                                <h3 class="portfolio-item-decription-title">Living the Simple Life</h3>
+                                <p class="portfolio-item-decription-text">
+                                    <strong>Living the Simple Life</strong> is a website I built with responsive design in mind. The website consist's
+                                    of three pages; a home page, an about page and a recent post
+                                    page. In this project I built a pixel
+                                    perfect website that is responsive across multiple devices, mobiles and desktop/laptop devices.
+                                </p>
+                                <ul class="portfolio-item-decription-tech flex">
+                                    <li class="portfolio-item-decription-tech-item">HTML</li>
+                                    <li class="portfolio-item-decription-tech-item">CSS</li>
+                                    <li class="portfolio-item-decription-tech-item">JS</li>
+                                </ul>
+                                <div class="portfolio-item-decription-btns flex">
+                                    <a href="https://github.com/tchassijordan/living-the-social-life"
+                                        class="btn code-btn">View Code</a>
+                                    <a href="http://ijordan.tech/living-the-social-life/" class="btn deployment-btn">Live
+                                        View</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </div> 
                     <div class="portfolio-item web recent">
-                        <a href="http://ijordan.tech/">
-                            <img class="portfolio-website-img" src="./images/dice.jpg" alt="Portfolio">
-                        </a>
-                        <div class="portfolio-item-decription flex">
-                            <div class="date">November - 2021</div>
-                            <h3 class="portfolio-item-decription-title">My Portfolio</h3>
-                            <p class="portfolio-item-decription-text">
-                                This is the second version of my portfolio website, the one you're currently browsing through. It's still being updated. Designed and built by me.
-                            </p>
-                            <div class="portfolio-item-decription-btns flex">
-                                <a href="https://github.com/tchassijordan/tchassijordan.github.io"
-                                    class="btn code-btn">View Code</a>
-                                <a href="http://ijordan.tech/" class="btn deployment-btn">Live
-                                    View</a>
+                        <div class="flex-p">
+                            <a class="portfolio-item-img-container" href="http://ijordan.tech/">
+                                <img class="portfolio-img" src="./images/dev-table.jpg" alt="Portfolio">
+                            </a>
+                            <div class="portfolio-item-decription">
+                                <h3 class="portfolio-item-decription-title">My Portfolio</h3>
+                                <p class="portfolio-item-decription-text">
+                                    This is the second version of my portfolio website, the one you're currently browsing through. It's still being updated. Designed and built by me.
+                                </p>
+                                <ul class="portfolio-item-decription-tech flex">
+                                    <li class="portfolio-item-decription-tech-item">HTML</li>
+                                    <li class="portfolio-item-decription-tech-item">CSS</li>
+                                    <li class="portfolio-item-decription-tech-item">JS</li>
+                                </ul>
+                                <div class="portfolio-item-decription-btns flex">
+                                    <a href="https://github.com/tchassijordan/tchassijordan.github.io"
+                                        class="btn code-btn">View Code</a>
+                                    <a href="http://ijordan.tech/" class="btn deployment-btn">Live
+                                        View</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -205,45 +220,51 @@
 
                 <div class="portfolio-games flex" id="p-games">
                     <div class="portfolio-item game" id="snake-game">
-                        <a href="http://ijordan.tech/Nokia3310-snake-game/">
-                            <img class="portfolio-game-img" src="./images/istock_snake.jpg" alt="Nokia3310 snake game">
-                        </a>
-                        <div class="portfolio-item-decription">
-                            <div class="date">August - 2021</div>
-                            <h3 class="portfolio-item-decription-title">Nokia3310 Snake Game</h3>
-                            <p class="portfolio-item-decription-text">
-                                This is a web based snake game I built from scratch. Building it I encountered some problems like establishing
-                                the game logic, which was by far the most difficult aspects of it's development. At the moment the game can only be played on desktop, 
-                                but hopefully I will redesign it for mobiles too.  
-                                The game's core is principally built on <strong>javascript</strong> and
-                                <strong>CSS</strong> which enabled me to 
-                                give it the necessary styling needed, <strong>HTML</strong> serves as an interface.
-                            </p>
-                            <div class="portfolio-item-decription-btns flex">
-                                <a href="https://github.com/tchassijordan/Nokia3310-snake-game"
-                                    class="btn code-btn">View Code</a>
-                                <a href="http://ijordan.tech/Nokia3310-snake-game/" class="btn deployment-btn">Play
-                                    Game</a>
+                        <div class="flex-p">
+                            <a class="portfolio-item-img-container" href="http://ijordan.tech/Nokia3310-snake-game/">
+                                <img class="portfolio-img" src="./images/nitendo-gamepads.jpg" alt="Nokia3310 snake game">
+                            </a>
+                            <div class="portfolio-item-decription">
+                                <h3 class="portfolio-item-decription-title">Nokia3310 Snake Game</h3>
+                                <p class="portfolio-item-decription-text">
+                                    This is a web based snake game I built from scratch. Building it I encountered some problems like establishing
+                                    the game logic, which was by far the most difficult aspects of it's development. 
+                                </p>
+                                <ul class="portfolio-item-decription-tech flex">
+                                    <li class="portfolio-item-decription-tech-item">HTML</li>
+                                    <li class="portfolio-item-decription-tech-item">CSS</li>
+                                    <li class="portfolio-item-decription-tech-item">JS</li>
+                                </ul>
+                                <div class="portfolio-item-decription-btns flex">
+                                    <a href="https://github.com/tchassijordan/Nokia3310-snake-game"
+                                        class="btn code-btn">View Code</a>
+                                    <a href="http://ijordan.tech/Nokia3310-snake-game/" class="btn deployment-btn">Play
+                                        Game</a>
+                                </div>
                             </div>
                         </div>
-
                     </div>
-                    <div class="portfolio-item game">
-                        <a href="http://ijordan.tech/pac-man/">
-                            <img class="portfolio-game-img" src="./images/pac-man_unsplash.jpg" alt="Pac-man">
-                        </a>
-                        <div class="portfolio-item-decription">
-                            <div class="date">August - 2021</div>
-                            <h3 class="portfolio-item-decription-title">Pac-man</h3>
-                            <p class="portfolio-item-decription-text">
-                                This is a web based game called Pac-man, can be played on desktop only. This was a challenging project to realize. I encountered so many
-                                challenges while building this awesome game such as implementing object oriented
-                                programming in javascript. 
-                                I built Pac-man using <strong>javascript</strong>.
-                            </p>
-                            <div class="portfolio-item-decription-btns flex">
-                                <a href="https://github.com/tchassijordan/pac-man" class="btn code-btn">View Code</a>
-                                <a href="http://ijordan.tech/pac-man/" class="btn deployment-btn">Play Game</a>
+                    <div class="portfolio-item game no-border">
+                        <div class="flex-p">
+                            <a class="portfolio-item-img-container" href="http://ijordan.tech/pac-man/">
+                                <img class="portfolio-img" style="object-position: center;" src="./images/new_pac-man.jpg" alt="Pac-man">
+                            </a>
+                            <div class="portfolio-item-decription">
+                                <h3 class="portfolio-item-decription-title">Pac-man</h3>
+                                <p class="portfolio-item-decription-text">
+                                    This is a web based game called Pac-man, can be played on desktop only. This was a challenging project to realize. I encountered so many
+                                    challenges while building this awesome game. Such as implementing object oriented
+                                    programming in javascript. 
+                                </p>
+                                <ul class="portfolio-item-decription-tech flex">
+                                    <li class="portfolio-item-decription-tech-item">HTML</li>
+                                    <li class="portfolio-item-decription-tech-item">CSS</li>
+                                    <li class="portfolio-item-decription-tech-item">JS</li>
+                                </ul>
+                                <div class="portfolio-item-decription-btns flex">
+                                    <a href="https://github.com/tchassijordan/pac-man" class="btn code-btn">View Code</a>
+                                    <a href="http://ijordan.tech/pac-man/" class="btn deployment-btn">Play Game</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -322,13 +343,12 @@
             <ul class="icons-list flex">
                 <li><a href="https://www.linkedin.com/in/idriss-jordan"><i class="fab fa-linkedin"></i></a></li>
                 <li><a href="https://github.com/tchassijordan/"><i class="fab fa-github"></i></a></li>
-                <li><a href="https://facebook.com/tchassijordan"><i class="fab fa-facebook-square"></i></a></li>
-                <li><a href="https://instagram.com/tchassi_jordan"><i class="fab fa-instagram"></i></a></li>
                 <li><a href="https://twitter.com/tchassijordan"><i class="fab fa-twitter-square"></i></a></li>
+                <li><a href="https://dev.to/tchassi_jordan"><i class="fab fa-dev"></i></a></li>
             </ul>
             <div class="credits flex">
                 <p>Tchassi Jordan </p>
-                <p>Copyright 2021</p>
+                <p>Copyright 2022</p>
             </div>
         </div>
     </footer>
