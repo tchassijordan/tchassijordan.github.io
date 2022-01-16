@@ -6,12 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?xml version="1.0" encoding="utf-8"?>
-    <title>ijordan - Portfolio</title>
+    <title>IJORDAN - Portfolio</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora|Ubuntu:300,400,700&display=swap">
     <link rel="stylesheet" href="css/index.css">
-    <!-- Remember to remove the links to local fontawesome before you push to github -->
-    <!-- <link rel="stylesheet" href="../../icons/fontawesome-free-5.15.2-web/css/all.css">
-    <link rel="stylesheet" href="../../icons/fontawesome-free-5.15.2-web/css/fontawesome.min.css"> -->
     <script src="https://kit.fontawesome.com/b6173cb5aa.js" crossorigin="anonymous"></script>
 </head>
 
@@ -28,7 +25,7 @@
                         <i class="fas fa-align-justify" id="open-slider"></i>
                         <i class="fas fa-align-left" id="close-slider"></i>
                         <div class="setting-top-c">
-                            <i class="fas fa-tools" id="setting-top"></i>
+                            <i class="fas fa-cog" id="setting-top"></i>
                             <ul class="setting-top-nav">
                                 <span class="setting-title">Themes</span>
                                 <li class="col-1 lock" id="light-theme-top">Light</li>
@@ -56,7 +53,7 @@
                         <li><a class="link el lock" href="#events">Events</a></li>
                         <li><a class="link el lock" href="#contact">Contact</a></li>
                         <li class="link" id="setting-bottom">
-                            <span id="setting-bottom-btn">Setting  <i class="fas fa-tools setting-bottom-i"></i></span>
+                            <span id="setting-bottom-btn">Setting  <i class="fas fa-cog setting-bottom-i"></i></span>
                             <ul class="setting-bottom-nav">
                                 <span class="setting-title">Themes</span>
                                 <li class="col-1 lock col-2" id="light-theme">Light</li>
@@ -67,67 +64,76 @@
                 </ul>
             </div>
         </nav>
+        <div class="intro">
+            <div class="container flex">
+                <div>
+                    <p>Tchassi Jordan</p>
+                    <h1>Self-taught front end developer,</h1>
+                </div>
+                <h1>School-taught software Engineer</h1>
+            </div>
+        </div>
     </header>
 
 
 
     <main role="main">
-        <div class="intro">
-            <div class="container flex">
-                <h1>Front end developer</h1>
-                <p>Heyo, It's jordan here. An ambitious developer looking to conquer the web with my skills.</p>
-            </div>
-        </div>
-
-
+        
         <div class="about" id="about-me">
             <div class="container">
                 <div class="about-me">
                     <h2 class="title">About Me</h2>
                     <div class="about-me-text">
                         I am called <span>Tchassi Jordan</span>, a junior front end web developer.
-                        I love playing basketball, listening to music, and programming & solving everyday shortcommings with lines of code.
-                        Web development is more of a marathon for me, it's really just all about getting myself out of
+                        I love playing basketball, listening to music, programming and solving everyday shortcomings with lines of code.
+                        Web development is more of a marathon for me, it's all about getting myself out of
                         my comfort zones,
                         working with others while pushing my abilities mentally and physically as a developer and as a
                         person.
+                        <br>
                         Writing lines of code is very important but I prioritize bringing my expertise in a spirit of
                         complete
-                        harmony and transpiracy in order to give our project the magical touch it needs. I challenge myself so that your objectives and mine can be attained.
+                        harmony and transparency in order to give our project the magical touch it needs. I challenge myself so that your objectives and mine can be attained.
                     </div>
                     <div class="about-me-skills-container">
                         <h3>Languages & Skills</h3>
                         <div class="about-me-skills">
                             <div class="flex">
-                                <div class="main-circle">
+                                <div class="main-circle flex-col">
                                     <img class="skill-img"
                                         src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
                                         alt="html5" />
+                                    <p class="skill-name">HTML</p>
                                 </div>
-                                <div class="main-circle">
+                                <div class="main-circle flex-col">
                                     <img class="skill-img"
                                         src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
                                         alt="css3" />
+                                    <p class="skill-name">CSS</p>
                                 </div>
-                                <div class="main-circle">
+                                <div class="main-circle flex-col">
                                     <img class="skill-img"
                                         src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
                                         alt="js" />
+                                    <p class="skill-name">JavaScript</p>
                                 </div>
-                                <div class="main-circle">
+                                <div class="main-circle flex-col">
                                     <img class="skill-img"
                                         src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg"
                                         alt="react" />
+                                    <p class="skill-name">React</p>
                                 </div>
-                                <div class="main-circle">
+                                <div class="main-circle flex-col">
                                     <img class="skill-img"
                                         src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg"
                                         alt="php" />
+                                    <p class="skill-name">PHP</p>
                                 </div>
-                                <div class="main-circle">
+                                <div class="main-circle flex-col">
                                     <img class="skill-img"
                                         src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg"
                                         alt="css3" />
+                                    <p class="skill-name">MySql</p>
                                 </div>
                             </div>
                             
@@ -165,7 +171,7 @@
                 </ul>
 
                 <div class="portfolio-websites flex" id="p-websites">
-                    <div class="portfolio-item web recent">
+                    <div class="portfolio-item web recent" tabindex="0">
                         <div class="flex-p">
                             <a class="portfolio-item-img-container" href="http://ijordan.tech/living-the-social-life/">
                                 <img class="portfolio-img" src="./images/work.jpg" alt="Living the Social Life">
@@ -173,15 +179,15 @@
                             <div class="portfolio-item-decription">
                                 <h3 class="portfolio-item-decription-title">Living the Simple Life</h3>
                                 <p class="portfolio-item-decription-text">
-                                    <strong>Living the Simple Life</strong> is a website I built with responsive design in mind. The website consist's
+                                    Living the Simple Life is a website I built with responsive design my principal focus. The website consist's
                                     of three pages; a home page, an about page and a recent post
                                     page. In this project I built a pixel
-                                    perfect website that is responsive across multiple devices, mobiles and desktop/laptop devices.
+                                    perfect website that is responsive across multiple devices such as; mobiles devices and desktop/laptop devices.
                                 </p>
-                                <ul class="portfolio-item-decription-tech flex">
-                                    <li class="portfolio-item-decription-tech-item">HTML</li>
-                                    <li class="portfolio-item-decription-tech-item">CSS</li>
-                                    <li class="portfolio-item-decription-tech-item">JS</li>
+                                <ul class="project-language-ul flex">
+                                    <li class="project-language-list">HTML</li>
+                                    <li class="project-language-list">CSS</li>
+                                    <li class="project-language-list">JS</li>
                                 </ul>
                                 <div class="portfolio-item-decription-btns flex">
                                     <a href="https://github.com/tchassijordan/living-the-social-life"
@@ -192,7 +198,7 @@
                             </div>
                         </div>
                     </div> 
-                    <div class="portfolio-item web recent">
+                    <div class="portfolio-item web recent" tabindex="0">
                         <div class="flex-p">
                             <a class="portfolio-item-img-container" href="http://ijordan.tech/">
                                 <img class="portfolio-img" src="./images/dev-table.jpg" alt="Portfolio">
@@ -202,10 +208,10 @@
                                 <p class="portfolio-item-decription-text">
                                     This is the second version of my portfolio website, the one you're currently browsing through. It's still being updated. Designed and built by me.
                                 </p>
-                                <ul class="portfolio-item-decription-tech flex">
-                                    <li class="portfolio-item-decription-tech-item">HTML</li>
-                                    <li class="portfolio-item-decription-tech-item">CSS</li>
-                                    <li class="portfolio-item-decription-tech-item">JS</li>
+                                <ul class="project-language-ul flex">
+                                    <li class="project-language-list">HTML</li>
+                                    <li class="project-language-list">CSS</li>
+                                    <li class="project-language-list">JS</li>
                                 </ul>
                                 <div class="portfolio-item-decription-btns flex">
                                     <a href="https://github.com/tchassijordan/tchassijordan.github.io"
@@ -219,7 +225,7 @@
                 </div>
 
                 <div class="portfolio-games flex" id="p-games">
-                    <div class="portfolio-item game" id="snake-game">
+                    <div class="portfolio-item game" id="snake-game" tabindex="0">
                         <div class="flex-p">
                             <a class="portfolio-item-img-container" href="http://ijordan.tech/Nokia3310-snake-game/">
                                 <img class="portfolio-img" src="./images/nitendo-gamepads.jpg" alt="Nokia3310 snake game">
@@ -227,13 +233,13 @@
                             <div class="portfolio-item-decription">
                                 <h3 class="portfolio-item-decription-title">Nokia3310 Snake Game</h3>
                                 <p class="portfolio-item-decription-text">
-                                    This is a web based snake game I built from scratch. Building it I encountered some problems like establishing
-                                    the game logic, which was by far the most difficult aspects of it's development. 
+                                    This is a web application snake game I built from scratch. Building it I encountered some problems like establishing
+                                    the game logic and many others. 
                                 </p>
-                                <ul class="portfolio-item-decription-tech flex">
-                                    <li class="portfolio-item-decription-tech-item">HTML</li>
-                                    <li class="portfolio-item-decription-tech-item">CSS</li>
-                                    <li class="portfolio-item-decription-tech-item">JS</li>
+                                <ul class="project-language-ul flex">
+                                    <li class="project-language-list">HTML</li>
+                                    <li class="project-language-list">CSS</li>
+                                    <li class="project-language-list">JS</li>
                                 </ul>
                                 <div class="portfolio-item-decription-btns flex">
                                     <a href="https://github.com/tchassijordan/Nokia3310-snake-game"
@@ -244,7 +250,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="portfolio-item game no-border">
+                    <div class="portfolio-item game no-border" tabindex="0">
                         <div class="flex-p">
                             <a class="portfolio-item-img-container" href="http://ijordan.tech/pac-man/">
                                 <img class="portfolio-img" style="object-position: center;" src="./images/new_pac-man.jpg" alt="Pac-man">
@@ -252,14 +258,13 @@
                             <div class="portfolio-item-decription">
                                 <h3 class="portfolio-item-decription-title">Pac-man</h3>
                                 <p class="portfolio-item-decription-text">
-                                    This is a web based game called Pac-man, can be played on desktop only. This was a challenging project to realize. I encountered so many
-                                    challenges while building this awesome game. Such as implementing object oriented
-                                    programming in javascript. 
+                                    This is a web based game called Pac-man, can be played on desktop only. A very challenging project to realize, in which I encountered difficulties like
+                                    implementing object oriented programming in javascript. 
                                 </p>
-                                <ul class="portfolio-item-decription-tech flex">
-                                    <li class="portfolio-item-decription-tech-item">HTML</li>
-                                    <li class="portfolio-item-decription-tech-item">CSS</li>
-                                    <li class="portfolio-item-decription-tech-item">JS</li>
+                                <ul class="project-language-ul flex">
+                                    <li class="project-language-list">HTML</li>
+                                    <li class="project-language-list">CSS</li>
+                                    <li class="project-language-list">JS</li>
                                 </ul>
                                 <div class="portfolio-item-decription-btns flex">
                                     <a href="https://github.com/tchassijordan/pac-man" class="btn code-btn">View Code</a>
@@ -282,7 +287,7 @@
             <div class="container">
                 <h2 class="title articles-title">Articles</h2>
                 <p class="article-text">
-                    I write on important features or topics that halt me on my coding journey.  
+                    I write on important features or topics on my coding journey.  
                 </p>
                 <div class="articles">
                     <div class="article-item">
@@ -293,7 +298,7 @@
                             <h3 class="article-item-title">How to create a react carousel app</h3>
                             <p class="article-item-text">
                                 In this article I simplified the process of creating your first react app, how to create a custom react hook. 
-                                Using that hook to create a carousel app. 
+                                And equally sing that hook to create a carousel app. 
                             </p>
                             <a class="btn article-btn" href="https://dev.to/tchassi_jordan/how-to-create-a-carousel-in-react-js-4872">View Article→</a>
                         </div>
@@ -307,8 +312,8 @@
                 <h2 class="title event-title">Events</h2>
                 <h4 class="event-item-mini-title">Featured Talks 🎤</h4>
                 <p class="event-text">
-                    Being the co-Lead of the <a href="https://gdsc.community.dev/yaounde-i-university/" target="_blank" rel="noopener noreferrer">Google Developer Student Club Yaoundé I</a>, I participate in practical event/study jams we organize on saturdays
-                    on google technologies and equally the trending technologies in the industry. 
+                    Being the co-Lead of the <a href="https://gdsc.community.dev/yaounde-i-university/" target="_blank" rel="noopener noreferrer">Google Developer Student Club Yaoundé I</a>, I participate in practical event/study jams we organize practically every 
+                    saturdays on google technologies and equally the trending technologies and topics in the industry. 
                 </p>
                 <div class="events">
                     <div class="event-item">
@@ -318,7 +323,7 @@
                         <div class="event-item-description flex">
                             <h3 class="event-item-title">Practical discovery of Git & GitHub</h3>
                             <p class="event-item-text">
-                                This was purely a practical event in which the other speakers and I talked about version control systems(notably Git) and corresponding hosting services like GitHub and their advantages. How to kickoff using them in your projects. 
+                                A purely practical event in which the other speakers and I talked about version control systems(notably Git) and corresponding hosting services like GitHub and their advantages. How to kickoff using them in your projects. 
                             </p>
                             <a class="btn gallery-btn" href="https://photos.google.com/share/AF1QipOmQA43xoI7PoCWqRdva-2eSJcttufTPsNZvZZbNSzwd2t6Xoc7CG-AjtFzfUcLUQ?key=TjBJaWFYNFFKRWUyOTZWMFRKMVFOa2owb0Z6ZmR3">Event Gallery→</a>
                         </div>
@@ -333,7 +338,7 @@
                 <p class="contact-text">
                     Do you need a competent and motivated developer for your projects?
                 </p>
-                <a class="contact-btn btn" href="mailto:tchassijordan@gmail.com">Mail Me</a>
+                <a class="contact-btn btn" href="mailto:tchassijordan@gmail.com">Hire Me</a>
             </div>
         </div>
     </main>

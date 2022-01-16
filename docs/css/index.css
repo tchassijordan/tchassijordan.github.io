@@ -25,6 +25,7 @@
     --footer-bg: var(--nav-bar-black);
     --footer-txt-col: rgba(255, 255, 255, 0.8);
     --setting-bg: var(--nav-bar-black-light);
+    --code-bg: rgb(255, 255, 255);
     --ds-txt: .85rem;
 }
 
@@ -96,7 +97,7 @@ img {
     border: none;
     border-radius: 5px;
     margin: 0 auto;
-    background-color: rgba(92, 91, 91, 0.747);
+    background-color: var(--code-bg);
     background-image: linear-gradient(to left, #ff723a, #ffa51d);
     cursor: pointer;
     text-transform: uppercase;
@@ -110,13 +111,12 @@ img {
     font-size: 0.65rem;
     margin: 0;
     padding: 1.5em 0em;
-    background: var(--nav-bg);
+    background: var(--about-bg);
     position: relative;
 }
 
-.fullNav {
-    position: fixed;
-    z-index: 100;
+.nav-bar .container {
+    position: relative;
 }
 
 .nav-bar-links, .logo-section {
@@ -130,14 +130,17 @@ img {
 }
 
 .nav-bar-links {
+    --nav-bg: var(--portfolio-bg);
     display: none;
     z-index: 5;
-    left: 0;
-    top: 66px;
     position: absolute;
     width: 100%;
-    height: calc(100vh - 3.125rem);
+    max-width: 200px;
+    right: 0;
+    height: fit-content;
     background-color: var(--nav-bg);
+    padding: 0 0 2em;
+    box-shadow: 0px 0px 3px 0.2px black;
 }
 
 .nav-bar a, 
@@ -154,6 +157,7 @@ img {
 .link,
 #abt-txt {
     font-size: 0.55rem;
+    cursor: pointer;
 }
 
 .nav-bar a, .nav-bar-about {
@@ -217,7 +221,7 @@ img {
 }
 
 #setting-top {
-    margin-left: 1.75em;
+    margin-left: 0.8em;
 }
 
 .setting-top-c,
@@ -294,10 +298,6 @@ img {
 
 
 @media (min-width: 575px) {
-    .nav-bar-links li {
-        margin-left: 2em;
-    }
-
     .nav-bar-about-nav li {
         margin: 0;
     }
@@ -332,34 +332,25 @@ img {
 /* --- INTRO --- */
 
 .intro {
-    color: rgb(255, 255, 255);
-    text-align: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-color: rgba(22, 22, 22, 0.493);
-    background-blend-mode: multiply;
-    background-image: url("../images/computer-screens.jpg");
     height: calc(100vh - 3.95rem);
+    background: rgb(2,0,36);
+    background: linear-gradient(0deg, var(--about-bg), var(--portfolio-bg) 50%, var(--about-bg) 50%);
 }
 
 .intro h1 {
-    border-bottom: 1px solid white;
-    padding-bottom: .5em;
-    display: inline;
-    opacity: .75;
-    color: rgb(255, 255, 255);
+    color: var(--white);
     letter-spacing: 1px;
-    max-width: 350px;
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    padding-bottom: 0.25em;
 }
 
 .intro p {
-    letter-spacing: 1px;
-    margin: .5em 0;
-    font-size: 0.85rem;
-    opacity: .85;
-    max-width: 275px;
-    font-weight: 400;
+    font-size: 0.75rem;
+    margin: 0;
+    color: var(--white);
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 
@@ -443,12 +434,20 @@ img {
 
 .main-circle {
     margin-bottom: 1em;
+    width: fit-content;
 }
 
 .skill-img {
     width: 3em;
     height: 3em;
     margin: 0 auto;
+}
+
+.skill-name {
+    margin: 0.2em auto 0;
+    font-size: var(--ds-txt);
+    letter-spacing: 1px;
+    opacity: 0.8;
 }
 
 .services-title::after {
@@ -564,14 +563,16 @@ img {
     text-decoration: none;
 }
 
-.portfolio-item-decription-tech {
+.project-language-ul {
     font-size: 0.65rem;
     margin: 0 0 1em;
     letter-spacing: 2px;
+    list-style-type: disc;
+    list-style-position: inside;
 }
 
-.portfolio-item-decription-tech-item {
-    padding: 0 1em 0 0;
+.project-language-list {
+    padding: 0 0.85em 0 0;
     color: var(--white);
     font-weight: 400;
 }
@@ -590,8 +591,15 @@ img {
     transition: 300ms;
 }
 
-.code-btn:hover, .deployment-btn:hover {
+.code-btn:hover,
+.code-btn:focus, 
+.deployment-btn:hover,
+.deployment-btn:focus {
     transform: scale(1.075);
+}
+
+.deployment-btn:hover,
+.deployment-btn:focus {
     color: var(--white);
 }
 
@@ -745,12 +753,9 @@ footer * {
     color: inherit;
 }
 
-.icons-list a:hover, .icons-list a:focus {
-    color: rgba(238, 111, 227, 0.575);
-}
-
 .credits p {
-    font-size: 1rem;
+    font-size: var(--ds-txt);
+    letter-spacing: 1px;
 }
 
 
@@ -770,6 +775,11 @@ footer * {
     grid-template: 12.5em auto / 100%;
     grid-template-areas: "image"
                          "description";
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
 }
 
 .nav-bar .flex {
@@ -816,7 +826,7 @@ footer * {
     grid-area: description;
 }
 
-.portfolio-item-decription-tech.flex {
+.project-language-ul.flex {
     justify-content: flex-start;
 }
 
@@ -910,18 +920,9 @@ footer * {
 
 @media (min-width: 575px) {
     .intro .flex {
-        flex-direction: row;
-    }
-    
-    .intro h1 {
-        border-bottom: none;
-        border-right: 1px solid rgb(255, 255, 255);
-        padding: 0 .75em;
-    }
-
-    .intro p {
-        max-width: 55%;
-        padding: 0 .75em 0 2.75em;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
     }
     
     .credits {
@@ -957,6 +958,10 @@ footer * {
         margin: 0;
         margin-right: 2em;
     }
+
+    .nav-bar-links li {
+        margin-left: 2em;
+    }
     
     .nav-bar li:last-child {
         margin-right: 0;
@@ -980,6 +985,10 @@ footer * {
         position:relative;
         height: 100%;
         top: 0;
+        padding-bottom: 0;
+        box-shadow: none;
+        max-width: 100%;
+        right: none;
     }
 
     .nav-bar-links .flex {
@@ -1001,19 +1010,12 @@ footer * {
     .portfolio-item {
         box-shadow: none;
         position: relative;
+        padding-bottom: 2.75em;
+        border-bottom: 1.5px dashed rgb(59, 89, 141);
     }
 
-    .portfolio-item::after {
-        content: '';
-        width: 100%;
-        height: 1px;
-        background-color: rgb(59, 89, 141);
-        position: absolute;
-        margin-top: 1.5em;
-    }
-
-    .no-border::after {
-        display: none;
+    .no-border {
+        border: none;
     }
 
     .flex-p {
@@ -1030,7 +1032,7 @@ footer * {
         font-size: .75rem;
     }
 
-    .portfolio-item-decription-tech {
+    .project-language-ul {
         font-size: 0.53rem;
         margin-bottom: 2em;
     }
