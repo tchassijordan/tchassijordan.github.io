@@ -68,7 +68,6 @@ closeSlider.addEventListener('click', () => {
 
 function handleNavbar() {
     if (navIsActive) {
-        h.classList.add('fullNav');
         navLinks.classList.remove('out');
         navLinks.classList.add('in');
         navLinks.style.display = "block";
@@ -76,7 +75,6 @@ function handleNavbar() {
         closeSlider.style.display = "block";
     }
     else {
-        h.classList.remove('fullNav');
         navLinks.classList.remove('in');
         navLinks.classList.add('out');
         setTimeout(()=> navLinks.style.display  = "none", 300);
@@ -144,6 +142,7 @@ function handleSetting() {
         rs.setProperty('--footer-txt-col', 'var(--nav-bar-black-light)');
         rs.setProperty('--light-gray', 'rgba(207, 206, 186, 0.288)');
         rs.setProperty('--article-bg', 'var(--light-gray)');
+        rs.setProperty('--code-bg','rgba(92, 91, 91, 0.747)');
         f.classList.remove('dark-f');
         f.classList.add('light-f');
     } else if (isDark) {
@@ -159,6 +158,7 @@ function handleSetting() {
         rs.setProperty('--footer-txt-col', 'rgba(255, 255, 255, 0.8)');
         rs.setProperty('--light-gray', 'rgba(207, 206, 186, 0.062)');
         rs.setProperty('--article-bg', 'var(--portfolio-bg)');
+        rs.setProperty('--code-bg','');
         f.classList.remove('light-f');
         f.classList.add('dark-f');
     }
