@@ -27,6 +27,7 @@
     --setting-bg: var(--nav-bar-black-light);
     --code-bg: rgb(255, 255, 255);
     --ds-txt: .85rem;
+    --event-ds-txt: var(--ds-txt);
 }
 
 body {
@@ -78,7 +79,7 @@ ul {
 
 .container {
     width: 90%;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -315,13 +316,13 @@ img {
 
 @media (min-width: 750px) {
     html {
-        font-size: 18.75px;
+        font-size: 18px;
     }
 }
 
 @media (min-width: 1025px) {
     html {
-        font-size: 20px;
+        font-size: 19px;
     }
 }
 
@@ -624,7 +625,7 @@ img {
 }
 
 .articles,
-.events {
+.event-item {
     margin: 1.75em 0;
     border-radius: 10px;
     max-width: 335px;
@@ -634,8 +635,8 @@ img {
     left: 5.4375rem;
 }
 
-.event-text,
-.article-text {
+.events-subtitle-text,
+.article-title-text {
     font-size: 0.85rem;
     letter-spacing: 1px;
 }
@@ -659,7 +660,7 @@ img {
 .article-btn,
 .gallery-btn {
     background-image: none;
-    background-color: var(--article-bg);
+    background-color: transparent;
     text-decoration: none;
     font-size: 0.65rem;
     padding-right: 0;
@@ -672,6 +673,13 @@ img {
     text-decoration: underline;
 }
 
+/* @media (min-width: 750px) {
+
+    .article-item-text {
+
+    }
+} */
+
 
 
 /* ---- EVENTS ---- */
@@ -679,19 +687,21 @@ img {
     padding-top: 0.1em;
 }
 
-.event-item-mini-title {
+.event-item {
+    height: 100%;
+    flex-grow: 1;
+    max-width: 350px;
+    width: 100%;
+}
+
+.events-subtitle {
     font-size: 0.8rem;
     letter-spacing: 1.25px;
 }
 
-.event-text a {
+.events-subtitle-text a {
     color: var(--white);
     font-weight: 400;
-}
-
-.event-text a:hover,
-.event-text a:focus {
-    text-decoration: none;
 }
 
 .event-item-image {
@@ -700,8 +710,53 @@ img {
     object-position: right;
 }
 
-.event-title::after {
+.events-title::after {
     left: 4.7rem;
+}
+
+@media (min-width: 700px) {
+    .event-item {
+        margin-right: 2em;
+        max-width: 320px;
+    }
+
+    .event-item:last-child {
+        margin-right: 0;
+        margin-top: 0;
+    }
+
+    .event-item-image {
+        height: 150px;
+        object-position: top center;
+    }
+}
+
+@media (min-width: 1042px) {
+    .event-item {
+        margin-right: 1em;
+        max-width: 300px;
+    }
+
+    .event-item:last-child {
+        margin-top: 1.75em;
+    }
+}
+
+@media (min-width: 1200px) {
+    .event-item {
+        max-width: 350px;
+    }
+
+    .event-item-image {
+        height: 200px;
+        object-position: center;
+    }
+}
+
+@media (min-width: 1260px) {
+    .event-item {
+        margin-right: 2em;
+    }
 }
 
 
@@ -805,7 +860,8 @@ footer * {
     height: 100%;
 }
 
-.about-me-skills .flex {
+.about-me-skills .flex,
+.events.flex {
     flex-direction: row;
     flex-wrap: wrap;
 }
@@ -814,7 +870,8 @@ footer * {
     flex-basis: 25%;
 }
 
-.portfolio-navigation {
+.portfolio-navigation,
+.events.flex {
     justify-content: flex-start;
 }
 
@@ -954,6 +1011,10 @@ footer * {
 
     .flex-p {
         grid-template-rows: 13.5em auto;
+    }
+
+    .event {
+        font-size: 0.5rem;
     }
 }
 
