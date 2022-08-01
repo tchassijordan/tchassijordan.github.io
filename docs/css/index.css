@@ -800,7 +800,6 @@ img {
     line-height: 1.35;
     margin: .5em 0;
     color: var(--white);
-    text-align: center;
     font-size: var(--ds-txt);
     letter-spacing: 1px;
 }
@@ -810,12 +809,13 @@ img {
     display: block;
     text-decoration: none;
     max-width: 120px;
-    margin-top: 1em;
+    margin-top: 2em;
     transform: scale(1);
     transition: 300ms;
     font-size: 0.65rem;
     color: var(--about-bg);
     text-align: center;
+    float: left;
 }
 
 .contact-btn:hover, .contact-btn:focus {
