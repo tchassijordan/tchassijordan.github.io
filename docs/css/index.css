@@ -335,7 +335,7 @@ img {
 .hero {
     height: calc(100vh - 3.95rem);
     background: rgb(2, 0, 36);
-    background: linear-gradient(0deg, var(--about-bg), var(--portfolio-bg) 50%, var(--about-bg) 50%);
+    background: linear-gradient(0deg, var(--portfolio-bg) 50%, var(--about-bg) 50%);
 }
 
 .hero h1 {
@@ -396,7 +396,6 @@ img {
 }
 
 .title::after,
-.about-me h3::before,
 .about-me h3::after {
     content: "";
     display: block;
@@ -420,59 +419,54 @@ img {
 }
 
 .about-me-skills-container {
-    background-color: var(--skills-bg);
+    /* background-color: var(--skills-bg);
     border-radius: 7px;
-    padding: 1em;
+    padding: 1em; */
     margin-top: 1.35em;
 }
 
 .about-me h3 {
     color: var(--white);
-    opacity: 0.65;
     text-transform: capitalize;
-    margin: 1em auto 2em;
+    opacity: 0.95;
+    margin: 1.5em 0 0.85em;
     font-size: 1.1rem;
-    font-style: normal;
     font-family: 'Ubuntu', sans-serif;
-    text-align: center;
     position: relative;
-}
-
-.about-me h3::before,
-.about-me h3::after {
-    margin: 0 auto;
-    width: 80%;
-    max-width: 300px;
-}
-
-.about-me h3::before {
-    margin-bottom: 0.75em;
+    max-width: max-content;
 }
 
 .about-me h3::after {
-    margin-top: 0.75em;
+    margin-top: 5px;
 }
 
 .about-me-skills {
     margin: 0 auto;
 }
 
-.main-circle {
-    margin-bottom: 1em;
-    width: fit-content;
+.skill-set-section {
+    border-bottom: 1px solid var(--skills-bg);
 }
 
-.skill-img {
-    width: 3em;
-    height: 3em;
-    margin: 0 auto;
+.skill-set-section:last-child {
+    border: none;
+}
+
+.skill-set-title {
+    font-size: 0.85rem;
+    opacity: 0.85;
+}
+
+.skill-set-section ul {
+    list-style-type: square;
 }
 
 .skill-name {
-    margin: 0.2em auto 0;
-    font-size: var(--ds-txt);
+    font-size: calc(var(--ds-txt) * 0.9);
     letter-spacing: 1px;
-    opacity: 0.8;
+    opacity: 0.7;
+    margin: 0 1em;
+    min-width: max-content;
 }
 
 .services-title::after {
@@ -490,7 +484,7 @@ img {
 }
 
 .wave-1 {
-    background-color: var(--portfolio-bg);
+    background-color: var(--about-bg);
 }
 
 .wave-2 {
@@ -536,7 +530,7 @@ img {
 
 .portfolio-item {
     margin-bottom: 2.75em;
-    box-shadow: 0px 0px 1px 0px black;
+    box-shadow: 0px 0px 20px 0px var(--portfolio-bg);
 }
 
 .portfolio-item:first-child {
@@ -876,7 +870,6 @@ footer * {
 }
 
 .hero .flex,
-.about-me-skills .flex,
 .nav-bar-links .flex {
     flex-direction: column;
     justify-content: center;
@@ -889,25 +882,26 @@ footer * {
     gap: 0.3em;
 }
 
-.about-me-skills .flex,
 .events.flex {
     flex-direction: row;
     flex-wrap: wrap;
 }
 
-.main-circle {
-    flex-basis: 25%;
-}
 
 .portfolio-navigation,
 .events.flex {
     justify-content: flex-start;
 }
 
-#p-websites, #p-games,
+#p-games,
 .portfolio-item-decription,
-.credits {
+.credits,
+.about-me-skills.flex {
     flex-direction: column;
+}
+
+#p-websites {
+    flex-direction: column-reverse;
 }
 
 .portfolio-navigation.flex {
@@ -922,7 +916,8 @@ footer * {
     grid-area: description;
 }
 
-.project-language-ul.flex {
+.project-language-ul.flex,
+.skill-set-section>.flex {
     justify-content: flex-start;
     flex-wrap: wrap;
 }
@@ -1044,10 +1039,6 @@ footer * {
 }
 
 @media (min-width: 602px) {
-    .main-circle {
-        flex-basis: 15.67%;
-    }
-
     .flex-p {
         grid-template-rows: 13.5em auto;
     }

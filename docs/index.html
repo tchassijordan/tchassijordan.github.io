@@ -95,120 +95,6 @@
     </header>
 
     <main role="main">
-      <!-- ABOUT ME section -->
-      <section class="about" id="about-me">
-        <div class="container">
-          <div class="about-me">
-            <h2 class="title">About Me</h2>
-            <div class="about-me-text">
-              Hey it's <span>Tchassi Jordan</span> here, a junior front end web
-              developer. Am a humble lad that uses his tech skills and position
-              to solve every day problems in order to create a better ecosystem
-              for the future. I love music, basketball, participating in
-              community events, tech talks and a lot more. Am equally a big fan
-              of remote work and life style.
-            </div>
-            <div class="about-me-skills-container">
-              <h3>Languages & Skills</h3>
-              <div class="about-me-skills">
-                <div class="flex">
-                  <div class="main-circle flex-col">
-                    <img
-                      class="skill-img"
-                      src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
-                      alt="html5"
-                    />
-                    <p class="skill-name">HTML</p>
-                  </div>
-                  <div class="main-circle flex-col">
-                    <img
-                      class="skill-img"
-                      src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
-                      alt="css3"
-                    />
-                    <p class="skill-name">CSS</p>
-                  </div>
-                  <div class="main-circle flex-col">
-                    <img
-                      class="skill-img"
-                      src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
-                      alt="javascript"
-                    />
-                    <p class="skill-name">JavaScript</p>
-                  </div>
-                  <div class="main-circle flex-col">
-                    <img
-                      class="skill-img"
-                      src="./images/skills-icons/typescript-2.svg"
-                      alt="TypeScript"
-                    />
-                    <p class="skill-name">TypeScript</p>
-                  </div>
-                  <div class="main-circle flex-col">
-                    <img
-                      class="skill-img"
-                      src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg"
-                      alt="react"
-                    />
-                    <p class="skill-name">React.js</p>
-                  </div>
-                  <div class="main-circle flex-col">
-                    <img
-                      class="skill-img"
-                      src="./images/skills-icons/Nextjs-logo.png"
-                      alt="Next.js"
-                    />
-                    <p class="skill-name">Next.js</p>
-                  </div>
-                  <div class="main-circle flex-col">
-                    <img
-                      class="skill-img"
-                      src="./images/skills-icons/tailwindcss.svg"
-                      alt="Tailwind CSS"
-                    />
-                    <p class="skill-name">Tailwind CSS</p>
-                  </div>
-                  <div class="main-circle flex-col">
-                    <img
-                      class="skill-img"
-                      src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg"
-                      alt="php"
-                    />
-                    <p class="skill-name">PHP</p>
-                  </div>
-                  <div class="main-circle flex-col">
-                    <img
-                      class="skill-img"
-                      src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg"
-                      alt="MySql"
-                    />
-                    <p class="skill-name">My SQL</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="about-services" id="services">
-            <h2 class="title services-title">Services</h2>
-            <ol class="services-list">
-              <li>Converting website designs into functional websites</li>
-              <li>Designing & building responsive websites</li>
-              <li>Connecting front end UI to backend using REST APIs</li>
-              <li>Deliver dynamic websites using javascript</li>
-              <li>Building chrome extensions</li>
-            </ol>
-          </div>
-        </div>
-      </section>
-      <div class="wave-border wave-1">
-        <svg viewBox="0 300 500 61.527" xmlns="http://www.w3.org/2000/svg">
-          <path
-            style="stroke: none; fill: var(--about-bg)"
-            d="M 0 300 C 60.524 305.377 175.978 311.3 265.623 349.433 C 344.628 383.04 465.548 340.101 500 300"
-          />
-        </svg>
-      </div>
-
       <!-- PORTFOLIO section -->
       <section class="portfolio" id="portfolio">
         <div class="container">
@@ -355,6 +241,48 @@
                 </div>
               </div>
             </div>
+            <div class="portfolio-item web recent" tabindex="0">
+              <div class="flex-p">
+                <a
+                  class="portfolio-item-img-container"
+                  href="https://locate-app.netlify.app"
+                >
+                  <img
+                    style="object-position: top"
+                    class="portfolio-img"
+                    src="./images/locate-screenshot.png"
+                    alt="Bteach illustration"
+                  />
+                </a>
+                <div class="portfolio-item-decription">
+                  <h3 class="portfolio-item-decription-title">Locate</h3>
+                  <p class="portfolio-item-decription-text">
+                    Locate is an open source localization web app enabling users
+                    who have lost important objects, like phones, and passports
+                    that can be traced with unique identifier to find them
+                    easily.
+                  </p>
+                  <ul class="project-language-ul flex">
+                    <li class="project-language-list">React</li>
+                    <li class="project-language-list">TypeScript</li>
+                    <li class="project-language-list">Tailwind CSS</li>
+                    <li class="project-language-list">Firebase</li>
+                  </ul>
+                  <div class="portfolio-item-decription-btns flex">
+                    <a
+                      href="https://github.com/tchassijordan/locate-lost-objects-app"
+                      class="btn code-btn"
+                      >View Code</a
+                    >
+                    <a
+                      href="https://locate-app.netlify.app"
+                      class="btn deployment-btn"
+                      >Live View</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div class="portfolio-games flex" id="p-games">
@@ -443,7 +371,15 @@
           </div>
         </div>
       </section>
-      <div class="wave-border wave-2">
+      <!-- <div class="wave-border wave-2">
+        <svg viewBox="0 300 500 61.527" xmlns="http://www.w3.org/2000/svg">
+          <path
+            style="stroke: none; fill: var(--portfolio-bg)"
+            d="M 0 300 C 60.524 305.377 175.978 311.3 265.623 349.433 C 344.628 383.04 465.548 340.101 500 300"
+          />
+        </svg>
+      </div> -->
+      <div class="wave-border wave-1">
         <svg viewBox="0 300 500 61.527" xmlns="http://www.w3.org/2000/svg">
           <path
             style="stroke: none; fill: var(--portfolio-bg)"
@@ -451,6 +387,77 @@
           />
         </svg>
       </div>
+
+      <!-- ABOUT ME section -->
+      <section class="about" id="about-me">
+        <div class="container">
+          <div class="about-me">
+            <h2 class="title">About Me</h2>
+            <div class="about-me-text">
+              Hey it's <span>Tchassi Jordan</span> here, a junior front end web
+              developer. Am a humble lad that uses his tech skills and position
+              to solve every day problems in order to create a better ecosystem
+              for the future. I love music, basketball, participating in
+              community events, tech talks and a lot more. Am equally a big fan
+              of remote work and life style.
+            </div>
+            <div class="about-me-skills-container">
+              <h3>Languages & Skills.</h3>
+              <div class="about-me-skills flex">
+                <div class="skill-set-section">
+                  <h4 class="skill-set-title">React & TypeScript</h4>
+                  <ul class="flex">
+                    <li class="skill-name">React 16.8+</li>
+                    <li class="skill-name">Next.js</li>
+                    <li class="skill-name">React Query</li>
+                  </ul>
+                </div>
+                <div class="skill-set-section">
+                  <h4 class="skill-set-title">Styles</h4>
+                  <ul class="flex">
+                    <li class="skill-name">Tailwind CSS</li>
+                    <li class="skill-name">CSS modules</li>
+                    <li class="skill-name">BootStrap</li>
+                  </ul>
+                </div>
+                <div class="skill-set-section">
+                  <h4 class="skill-set-title">Testing</h4>
+                  <ul class="flex">
+                    <li class="skill-name">JEST</li>
+                    <li class="skill-name">React Testing Library</li>
+                  </ul>
+                </div>
+                <div class="skill-set-section">
+                  <h4 class="skill-set-title">Firebase Services</h4>
+                  <ul class="flex">
+                    <li class="skill-name">Cloud Firestore</li>
+                    <li class="skill-name">Real time database</li>
+                    <li class="skill-name">Firebase Authentication</li>
+                  </ul>
+                </div>
+                <div class="skill-set-section">
+                  <h4 class="skill-set-title">Back end stacks & Databases</h4>
+                  <ul class="flex">
+                    <li class="skill-name">MySQL</li>
+                    <li class="skill-name">Java</li>
+                    <li class="skill-name">PHP</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="about-services" id="services">
+            <h2 class="title services-title">Services</h2>
+            <ol class="services-list">
+              <li>Converting website designs into functional websites</li>
+              <li>Designing & building responsive websites</li>
+              <li>Connecting front end UI to backend using REST APIs</li>
+              <li>Deliver dynamic websites using javascript</li>
+              <li>Building chrome extensions</li>
+            </ol>
+          </div>
+        </div>
+      </section>
 
       <!-- ARTICLES section -->
       <section class="article-c" id="articles">
