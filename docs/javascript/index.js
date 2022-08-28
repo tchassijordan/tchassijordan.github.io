@@ -13,7 +13,7 @@ let isGames = false;
 const navLinks = document.querySelector(".nav-bar-links");
 const root = document.querySelector(":root");
 const rootStyles = getComputedStyle(root);
-const activePortfolioNav = rootStyles.getPropertyValue("--white-gn");
+const activePortfolioNav = rootStyles.getPropertyValue("--white");
 const openSlider = document.getElementById("open-slider");
 const closeSlider = document.getElementById("close-slider");
 let navIsActive = false;
@@ -205,21 +205,27 @@ function setInitial() {
   isAll = false;
   isWebsite = false;
   isGames = false;
-  portfolioNavLinks.map((item) => (item.style.color = "var(--nav-txt-col)"));
+  portfolioNavLinks.map((item) => {
+    item.style.color = "var(--white)";
+    item.style.opacity = 0.55;
+  });
   portfolioList.map((item) => (item.style.display = "none"));
 }
 
 function handleActivePortfolio() {
   if (isAll) {
-    displayAllPortfolio.style.color = activePortfolioNav;
+    displayAllPortfolio.style.color = "var(--white)";
+    displayAllPortfolio.style.opacity = 1;
     portfolioList.map((item) => (item.style.display = "block"));
   } else if (isGames) {
-    displayGamesPorfolio.style.color = activePortfolioNav;
+    displayGamesPorfolio.style.color = "var(--white)";
+    displayGamesPorfolio.style.opacity = 1;
     portfolioList
       .filter((item) => item.classList.contains("game"))
       .map((item) => (item.style.display = "block"));
   } else if (isWebsite) {
-    displayWebPorfolio.style.color = activePortfolioNav;
+    displayWebPorfolio.style.color = "var(--white)";
+    displayWebPorfolio.style.opacity = 1;
     portfolioList
       .filter((item) => item.classList.contains("web"))
       .map((item) => (item.style.display = "block"));

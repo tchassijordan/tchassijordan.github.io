@@ -512,8 +512,7 @@ img {
 }
 
 .portfolio-navigation {
-    margin: 0 auto;
-    margin: 1em;
+    margin: 1em 0;
 }
 
 .portfolio-navigation li {
@@ -522,6 +521,16 @@ img {
     text-transform: capitalize;
     cursor: pointer;
     letter-spacing: 1px;
+    color: white;
+    opacity: 0.55;
+}
+
+.portfolio-navigation li:first-child {
+    padding-left: 0;
+}
+
+.portfolio-navigation li:hover {
+    opacity: 1;
 }
 
 .portfolio-navigation a {
