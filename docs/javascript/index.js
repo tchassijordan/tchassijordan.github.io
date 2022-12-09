@@ -1,4 +1,5 @@
 import disableBtn from "./disableBtn.js";
+import addYearToEltById from "./addYearToEltById.js";
 
 const portfolioItems = document.querySelectorAll(".portfolio-item");
 const displayAllPortfolio = document.getElementById("d-all");
@@ -263,3 +264,4 @@ function displayWebsite() {
 window.addEventListener("load", displayWebsite);
 
 disableBtn("empty-href-btn");
+addYearToEltById("footer-copyright-container");
