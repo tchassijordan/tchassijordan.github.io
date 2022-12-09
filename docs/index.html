@@ -1,377 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Am a front end developer. I deliver top notch websites and maintainable web apps, Follow through to see projects I've worked on."
-    />
-    <?xml version="1.0" encoding="utf-8"?>
-    <title>Tchassi Jordan - Portfolio</title>
-    <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Lora|Ubuntu:300,400,700&display=swap"
-    />
-    <link rel="stylesheet" href="css/index.css" />
-    <script
-      src="https://kit.fontawesome.com/b6173cb5aa.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
 
-  <body>
-    <header>
-      <!-- NAVBAR section -->
-      <nav class="nav-bar">
-        <div class="container">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Am a front end developer. I deliver top notch websites and maintainable web apps, Follow through to see projects I've worked on." />
+  <?xml version="1.0" encoding="utf-8"?>
+  <title>Tchassi Jordan - Portfolio</title>
+  <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora|Ubuntu:300,400,700&display=swap" />
+  <link rel="stylesheet" href="css/index.css" />
+  <script src="https://kit.fontawesome.com/b6173cb5aa.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <!-- NAVBAR section -->
+    <nav class="nav-bar">
+      <div class="container">
+        <div class="flex">
+          <div class="logo-section" id="logo-section">
+            <a href="index.html">ijordan</a>
+          </div>
+
+          <div class="slider flex" id="slider">
+            <i class="fas fa-align-justify" id="open-slider"></i>
+            <i class="fas fa-align-left" id="close-slider"></i>
+            <div class="setting-top-c">
+              <i class="fas fa-cog" id="setting-top"></i>
+              <ul class="setting-top-nav">
+                <span class="setting-title">Themes</span>
+                <li class="col-1 lock" id="light-theme-top">Light</li>
+                <li class="col-1 lock" id="dark-theme-top">Dark</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <ul class="nav-bar-links">
           <div class="flex">
-            <div class="logo-section" id="logo-section">
-              <a href="index.html">ijordan</a>
-            </div>
-
-            <div class="slider flex" id="slider">
-              <i class="fas fa-align-justify" id="open-slider"></i>
-              <i class="fas fa-align-left" id="close-slider"></i>
-              <div class="setting-top-c">
-                <i class="fas fa-cog" id="setting-top"></i>
-                <ul class="setting-top-nav">
-                  <span class="setting-title">Themes</span>
-                  <li class="col-1 lock" id="light-theme-top">Light</li>
-                  <li class="col-1 lock" id="dark-theme-top">Dark</li>
-                </ul>
-              </div>
-            </div>
+            <li class="nav-bar-about">
+              <span id="abt-txt">About</span>
+              <ul class="nav-bar-about-nav">
+                <li>
+                  <a class="link el lock" href="#about-me">About Me</a>
+                </li>
+                <li>
+                  <a class="link el lock" href="#services">Services</a>
+                </li>
+              </ul>
+            </li>
+            <li><a class="link el lock" href="#portfolio">Portfolio</a></li>
+            <li><a class="link el lock" href="#articles">Articles</a></li>
+            <li><a class="link el lock" href="#events">Events</a></li>
+            <li><a class="link el lock" href="#contact">Contact</a></li>
+            <li class="link" id="setting-bottom">
+              <span id="setting-bottom-btn">Setting <i class="fas fa-cog setting-bottom-i"></i></span>
+              <ul class="setting-bottom-nav">
+                <span class="setting-title">Themes</span>
+                <li class="col-1 lock col-2" id="light-theme">Light</li>
+                <li class="col-1 lock col-2" id="dark-theme">Dark</li>
+              </ul>
+            </li>
           </div>
-          <ul class="nav-bar-links">
-            <div class="flex">
-              <li class="nav-bar-about">
-                <span id="abt-txt">About</span>
-                <ul class="nav-bar-about-nav">
-                  <li>
-                    <a class="link el lock" href="#about-me">About Me</a>
-                  </li>
-                  <li>
-                    <a class="link el lock" href="#services">Services</a>
-                  </li>
-                </ul>
-              </li>
-              <li><a class="link el lock" href="#portfolio">Portfolio</a></li>
-              <li><a class="link el lock" href="#articles">Articles</a></li>
-              <li><a class="link el lock" href="#events">Events</a></li>
-              <li><a class="link el lock" href="#contact">Contact</a></li>
-              <li class="link" id="setting-bottom">
-                <span id="setting-bottom-btn"
-                  >Setting <i class="fas fa-cog setting-bottom-i"></i
-                ></span>
-                <ul class="setting-bottom-nav">
-                  <span class="setting-title">Themes</span>
-                  <li class="col-1 lock col-2" id="light-theme">Light</li>
-                  <li class="col-1 lock col-2" id="dark-theme">Dark</li>
-                </ul>
-              </li>
-            </div>
-          </ul>
+        </ul>
+      </div>
+    </nav>
+    <!-- HERO section -->
+    <section class="hero">
+      <div class="container flex">
+        <div>
+          <p>Tchassi Jordan</p>
+          <h1>Self-taught front end developer,</h1>
         </div>
-      </nav>
-      <!-- HERO section -->
-      <section class="hero">
-        <div class="container flex">
-          <div>
-            <p>Tchassi Jordan</p>
-            <h1>Self-taught front end developer,</h1>
-          </div>
-          <h1>School-taught software Engineer</h1>
-          <p class="hero-scroll-indicator flex">
-            <span>Scroll</span>
-            <span class="hero-scroll-btn"
-              ><i class="fa-solid fa-arrow-down"></i
-            ></span>
-          </p>
-        </div>
-      </section>
-    </header>
+        <h1>School-taught software Engineer</h1>
+        <p class="hero-scroll-indicator flex">
+          <span>Scroll</span>
+          <span class="hero-scroll-btn"><i class="fa-solid fa-arrow-down"></i></span>
+        </p>
+      </div>
+    </section>
+  </header>
 
-    <main role="main">
-      <!-- PORTFOLIO section -->
-      <section class="portfolio" id="portfolio">
-        <div class="container">
-          <h2 class="title portfolio-title">Portfolio</h2>
-          <ul class="portfolio-navigation flex">
-            <li id="d-all">All</li>
-            <li id="d-web">Websites</li>
-            <li id="d-games">Javascript Games</li>
-          </ul>
+  <main role="main">
+    <!-- PORTFOLIO section -->
+    <section class="portfolio" id="portfolio">
+      <div class="container">
+        <h2 class="title portfolio-title">Portfolio</h2>
+        <ul class="portfolio-navigation flex">
+          <li id="d-all">All</li>
+          <li id="d-web">Websites</li>
+          <li id="d-games">Javascript Games</li>
+        </ul>
 
-          <div class="portfolio-websites flex" id="p-websites">
-            <div class="portfolio-item web recent" tabindex="0">
-              <div class="flex-p">
-                <a
-                  class="portfolio-item-img-container"
-                  href="https://living-a-simple-life.netlify.app/"
-                >
-                  <img
-                    class="portfolio-img"
-                    src="./images/work.jpg"
-                    alt="Living the Social Life"
-                  />
-                </a>
-                <div class="portfolio-item-decription">
-                  <h3 class="portfolio-item-decription-title">
-                    Living the Simple Life
-                  </h3>
-                  <p class="portfolio-item-decription-text">
-                    Living the Simple Life is a website I built with responsive
-                    design my principal focus. The website consist's of three
-                    pages; a home page, an about page and a recent post page. In
-                    this project I built a pixel perfect website that is
-                    responsive across multiple devices such as; mobiles devices
-                    and desktop/laptop devices.
-                  </p>
-                  <ul class="project-language-ul flex">
-                    <li class="project-language-list">HTML</li>
-                    <li class="project-language-list">CSS</li>
-                    <li class="project-language-list">JS</li>
-                  </ul>
-                  <div class="portfolio-item-decription-btns flex">
-                    <a
-                      href="https://github.com/tchassijordan/living-the-social-life"
-                      class="btn code-btn"
-                      >View Code</a
-                    >
-                    <a
-                      href="https://living-a-simple-life.netlify.app/"
-                      class="btn deployment-btn"
-                      >Live View</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="portfolio-item web recent" tabindex="0">
-              <div class="flex-p">
-                <a
-                  class="portfolio-item-img-container portfolio-item-img-container-center"
-                  href="https://queens-creamy-cake.netlify.app/"
-                >
-                  <img
-                    class="portfolio-img"
-                    src="./images/QCC_logo.jpg"
-                    alt="queens creamy cake illustration"
-                  />
-                </a>
-                <div class="portfolio-item-decription">
-                  <h3 class="portfolio-item-decription-title">
-                    Queens Creamy Cakes
-                  </h3>
-                  <p class="portfolio-item-decription-text">
-                    Here's a demo marketplace I worked on for a pastry chef. The
-                    main goal of the project was to enable the chef present her
-                    goods and services through the platform. To realize this web
-                    app I used React to build the front end UI and firebase as
-                    back end.
-                  </p>
-                  <ul class="project-language-ul flex">
-                    <li class="project-language-list">React</li>
-                    <li class="project-language-list">CSS modules</li>
-                    <li class="project-language-list">Firebase</li>
-                  </ul>
-                  <div class="portfolio-item-decription-btns flex">
-                    <a
-                      href="https://github.com/tchassijordan/Queens_Creamy_Cake"
-                      class="btn code-btn"
-                      >View Code</a
-                    >
-                    <a
-                      href="https://queens-creamy-cake.netlify.app/"
-                      class="btn deployment-btn"
-                      >Live View</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="portfolio-item web recent" tabindex="0">
-              <div class="flex-p">
-                <a
-                  class="portfolio-item-img-container"
-                  href="https://bteach-server.web.app/"
-                >
-                  <img
-                    style="object-position: top"
-                    class="portfolio-img"
-                    src="./images/bteach-server.web.app_.png"
-                    alt="Bteach illustration"
-                  />
-                </a>
-                <div class="portfolio-item-decription">
-                  <h3 class="portfolio-item-decription-title">
-                    Bteach - Business & Tech
-                  </h3>
-                  <p class="portfolio-item-decription-text">
-                    Bteach is a freelance website for teachers, academic tutors,
-                    and professors. I teamed up with 3 other developers to
-                    develop this product. Our principal motivation was to build
-                    a platform that solves
-                    <a style="font-weight: 300" href="https://sdgs.un.org/goals"
-                      >two United Nations sustainable development goals</a
-                    >, specifically <strong>no-poverty</strong> and
-                    <strong>quality education</strong>.
-                  </p>
-                  <ul class="project-language-ul flex">
-                    <li class="project-language-list">React</li>
-                    <li class="project-language-list">Tailwind CSS</li>
-                    <li class="project-language-list">CSS modules</li>
-                    <li class="project-language-list">Firebase</li>
-                  </ul>
-                  <div class="portfolio-item-decription-btns flex">
-                    <a
-                      href="https://github.com/ngimdock/bteach"
-                      class="btn code-btn"
-                      >View Code</a
-                    >
-                    <a
-                      href="https://bteach-server.web.app/"
-                      class="btn deployment-btn"
-                      >Live View</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="portfolio-item web recent" tabindex="0">
-              <div class="flex-p">
-                <a
-                  class="portfolio-item-img-container"
-                  href="https://locate-app.netlify.app"
-                >
-                  <img
-                    style="object-position: top"
-                    class="portfolio-img"
-                    src="./images/locate-screenshot.png"
-                    alt="Bteach illustration"
-                  />
-                </a>
-                <div class="portfolio-item-decription">
-                  <h3 class="portfolio-item-decription-title">Locate</h3>
-                  <p class="portfolio-item-decription-text">
-                    Locate is an open source localization web app enabling users
-                    who have lost important objects, like phones, and passports
-                    that can be traced with unique identifier to find them
-                    easily.
-                  </p>
-                  <ul class="project-language-ul flex">
-                    <li class="project-language-list">React</li>
-                    <li class="project-language-list">TypeScript</li>
-                    <li class="project-language-list">Tailwind CSS</li>
-                    <li class="project-language-list">Firebase</li>
-                  </ul>
-                  <div class="portfolio-item-decription-btns flex">
-                    <a
-                      href="https://github.com/tchassijordan/locate-lost-objects-app"
-                      class="btn code-btn"
-                      >View Code</a
-                    >
-                    <a
-                      href="https://locate-app.netlify.app"
-                      class="btn deployment-btn"
-                      >Live View</a
-                    >
-                  </div>
+        <div class="portfolio-websites flex" id="p-websites">
+          <div class="portfolio-item web recent" tabindex="0">
+            <div class="flex-p">
+              <a class="portfolio-item-img-container" href="https://living-a-simple-life.netlify.app/">
+                <img class="portfolio-img" src="./images/work.jpg" alt="Living the Social Life" />
+              </a>
+              <div class="portfolio-item-decription">
+                <h3 class="portfolio-item-decription-title">
+                  Living the Simple Life
+                </h3>
+                <p class="portfolio-item-decription-text">
+                  Living the Simple Life is a website I built with responsive
+                  design my principal focus. The website consist's of three
+                  pages; a home page, an about page and a recent post page. In
+                  this project I built a pixel perfect website that is
+                  responsive across multiple devices such as; mobiles devices
+                  and desktop/laptop devices.
+                </p>
+                <ul class="project-language-ul flex">
+                  <li class="project-language-list">HTML</li>
+                  <li class="project-language-list">CSS</li>
+                  <li class="project-language-list">JS</li>
+                </ul>
+                <div class="portfolio-item-decription-btns flex">
+                  <a href="https://github.com/tchassijordan/living-the-social-life" class="btn code-btn">View Code</a>
+                  <a href="https://living-a-simple-life.netlify.app/" class="btn deployment-btn">Live View</a>
                 </div>
               </div>
             </div>
           </div>
-
-          <div class="portfolio-games flex" id="p-games">
-            <div class="portfolio-item game" id="snake-game" tabindex="0">
-              <div class="flex-p">
-                <a
-                  class="portfolio-item-img-container"
-                  href="https://nokia3310-snake-game.netlify.app/"
-                >
-                  <img
-                    class="portfolio-img"
-                    src="./images/nitendo-gamepads.jpg"
-                    alt="Nokia3310 snake game"
-                  />
-                </a>
-                <div class="portfolio-item-decription">
-                  <h3 class="portfolio-item-decription-title">
-                    Nokia3310 Snake Game
-                  </h3>
-                  <p class="portfolio-item-decription-text">
-                    This is a web application snake game I built from scratch.
-                    Building it I encountered some problems like establishing
-                    the game logic and many others.
-                  </p>
-                  <ul class="project-language-ul flex">
-                    <li class="project-language-list">HTML</li>
-                    <li class="project-language-list">CSS</li>
-                    <li class="project-language-list">JS</li>
-                  </ul>
-                  <div class="portfolio-item-decription-btns flex">
-                    <a
-                      href="https://github.com/tchassijordan/Nokia3310-snake-game"
-                      class="btn code-btn"
-                      >View Code</a
-                    >
-                    <a
-                      href="https://nokia3310-snake-game.netlify.app/"
-                      class="btn deployment-btn"
-                      >Play Game</a
-                    >
-                  </div>
+          <div class="portfolio-item web recent" tabindex="0">
+            <div class="flex-p">
+              <a class="portfolio-item-img-container portfolio-item-img-container-center"
+                href="https://queens-creamy-cake.netlify.app/">
+                <img class="portfolio-img" src="./images/QCC_logo.jpg" alt="queens creamy cake illustration" />
+              </a>
+              <div class="portfolio-item-decription">
+                <h3 class="portfolio-item-decription-title">
+                  Queens Creamy Cakes
+                </h3>
+                <p class="portfolio-item-decription-text">
+                  Here's a demo marketplace I worked on for a pastry chef. The
+                  main goal of the project was to enable the chef present her
+                  goods and services through the platform. To realize this web
+                  app I used React to build the front end UI and firebase as
+                  back end.
+                </p>
+                <ul class="project-language-ul flex">
+                  <li class="project-language-list">React</li>
+                  <li class="project-language-list">CSS modules</li>
+                  <li class="project-language-list">Firebase</li>
+                </ul>
+                <div class="portfolio-item-decription-btns flex">
+                  <a href="https://github.com/tchassijordan/Queens_Creamy_Cake" class="btn code-btn">View Code</a>
+                  <a href="https://queens-creamy-cake.netlify.app/" class="btn deployment-btn">Live View</a>
                 </div>
               </div>
             </div>
-            <div class="portfolio-item game no-border" tabindex="0">
-              <div class="flex-p">
-                <a
-                  class="portfolio-item-img-container"
-                  href="https://pacman-web-game.netlify.app/"
-                >
-                  <img
-                    class="portfolio-img"
-                    style="object-position: center"
-                    src="./images/new_pac-man.jpg"
-                    alt="Pac-man"
-                  />
-                </a>
-                <div class="portfolio-item-decription">
-                  <h3 class="portfolio-item-decription-title">Pac-man</h3>
-                  <p class="portfolio-item-decription-text">
-                    This is a web based game called Pac-man, can be played on
-                    desktop only. A very challenging project to realize, in
-                    which I encountered difficulties like implementing object
-                    oriented programming in javascript.
-                  </p>
-                  <ul class="project-language-ul flex">
-                    <li class="project-language-list">HTML</li>
-                    <li class="project-language-list">CSS</li>
-                    <li class="project-language-list">JS</li>
-                  </ul>
-                  <div class="portfolio-item-decription-btns flex">
-                    <a
-                      href="https://github.com/tchassijordan/pac-man"
-                      class="btn code-btn"
-                      >View Code</a
-                    >
-                    <a
-                      href="https://pacman-web-game.netlify.app/"
-                      class="btn deployment-btn"
-                      >Play Game</a
-                    >
-                  </div>
+          </div>
+          <div class="portfolio-item web recent" tabindex="0">
+            <div class="flex-p">
+              <a class="portfolio-item-img-container" href="https://bteach-server.web.app/">
+                <img style="object-position: top" class="portfolio-img" src="./images/bteach-server.web.app_.png"
+                  alt="Bteach illustration" />
+              </a>
+              <div class="portfolio-item-decription">
+                <h3 class="portfolio-item-decription-title">
+                  Bteach - Business & Tech
+                </h3>
+                <p class="portfolio-item-decription-text">
+                  Bteach is a freelance website for teachers, academic tutors,
+                  and professors. I teamed up with 3 other developers to
+                  develop this product. Our principal motivation was to build
+                  a platform that solves
+                  <a style="font-weight: 300" href="https://sdgs.un.org/goals">two United Nations sustainable
+                    development goals</a>, specifically <strong>no-poverty</strong> and
+                  <strong>quality education</strong>.
+                </p>
+                <ul class="project-language-ul flex">
+                  <li class="project-language-list">React</li>
+                  <li class="project-language-list">Tailwind CSS</li>
+                  <li class="project-language-list">CSS modules</li>
+                  <li class="project-language-list">Firebase</li>
+                </ul>
+                <div class="portfolio-item-decription-btns flex">
+                  <a href="https://github.com/ngimdock/bteach" class="btn code-btn">View Code</a>
+                  <a href="https://bteach-server.web.app/" class="btn deployment-btn">Live View</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-item web recent" tabindex="0">
+            <div class="flex-p">
+              <a class="portfolio-item-img-container" href="https://locate-app.netlify.app">
+                <img style="object-position: top" class="portfolio-img" src="./images/locate-screenshot.png"
+                  alt="Bteach illustration" />
+              </a>
+              <div class="portfolio-item-decription">
+                <h3 class="portfolio-item-decription-title">Locate</h3>
+                <p class="portfolio-item-decription-text">
+                  Locate is an open source localization web app enabling users
+                  who have lost important objects, like phones, and passports
+                  that can be traced with unique identifier to find them
+                  easily.
+                </p>
+                <ul class="project-language-ul flex">
+                  <li class="project-language-list">React</li>
+                  <li class="project-language-list">TypeScript</li>
+                  <li class="project-language-list">Tailwind CSS</li>
+                  <li class="project-language-list">Firebase</li>
+                </ul>
+                <div class="portfolio-item-decription-btns flex">
+                  <a href="https://github.com/tchassijordan/locate-lost-objects-app" class="btn code-btn">View Code</a>
+                  <a href="https://locate-app.netlify.app" class="btn deployment-btn">Live View</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <!-- <div class="wave-border wave-2">
+
+        <div class="portfolio-games flex" id="p-games">
+          <div class="portfolio-item game" id="snake-game" tabindex="0">
+            <div class="flex-p">
+              <a class="portfolio-item-img-container" href="https://nokia3310-snake-game.netlify.app/">
+                <img class="portfolio-img" src="./images/nitendo-gamepads.jpg" alt="Nokia3310 snake game" />
+              </a>
+              <div class="portfolio-item-decription">
+                <h3 class="portfolio-item-decription-title">
+                  Nokia3310 Snake Game
+                </h3>
+                <p class="portfolio-item-decription-text">
+                  This is a web application snake game I built from scratch.
+                  Building it I encountered some problems like establishing
+                  the game logic and many others.
+                </p>
+                <ul class="project-language-ul flex">
+                  <li class="project-language-list">HTML</li>
+                  <li class="project-language-list">CSS</li>
+                  <li class="project-language-list">JS</li>
+                </ul>
+                <div class="portfolio-item-decription-btns flex">
+                  <a href="https://github.com/tchassijordan/Nokia3310-snake-game" class="btn code-btn">View Code</a>
+                  <a href="https://nokia3310-snake-game.netlify.app/" class="btn deployment-btn">Play Game</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-item game no-border" tabindex="0">
+            <div class="flex-p">
+              <a class="portfolio-item-img-container" href="https://pacman-web-game.netlify.app/">
+                <img class="portfolio-img" style="object-position: center" src="./images/new_pac-man.jpg"
+                  alt="Pac-man" />
+              </a>
+              <div class="portfolio-item-decription">
+                <h3 class="portfolio-item-decription-title">Pac-man</h3>
+                <p class="portfolio-item-decription-text">
+                  This is a web based game called Pac-man, can be played on
+                  desktop only. A very challenging project to realize, in
+                  which I encountered difficulties like implementing object
+                  oriented programming in javascript.
+                </p>
+                <ul class="project-language-ul flex">
+                  <li class="project-language-list">HTML</li>
+                  <li class="project-language-list">CSS</li>
+                  <li class="project-language-list">JS</li>
+                </ul>
+                <div class="portfolio-item-decription-btns flex">
+                  <a href="https://github.com/tchassijordan/pac-man" class="btn code-btn">View Code</a>
+                  <a href="https://pacman-web-game.netlify.app/" class="btn deployment-btn">Play Game</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- <div class="wave-border wave-2">
         <svg viewBox="0 300 500 61.527" xmlns="http://www.w3.org/2000/svg">
           <path
             style="stroke: none; fill: var(--portfolio-bg)"
@@ -379,263 +278,216 @@
           />
         </svg>
       </div> -->
-      <div class="wave-border wave-1">
-        <svg viewBox="0 300 500 61.527" xmlns="http://www.w3.org/2000/svg">
-          <path
-            style="stroke: none; fill: var(--portfolio-bg)"
-            d="M 0 300 C 60.524 305.377 175.978 311.3 265.623 349.433 C 344.628 383.04 465.548 340.101 500 300"
-          />
-        </svg>
-      </div>
+    <div class="wave-border wave-1">
+      <svg viewBox="0 300 500 61.527" xmlns="http://www.w3.org/2000/svg">
+        <path style="stroke: none; fill: var(--portfolio-bg)"
+          d="M 0 300 C 60.524 305.377 175.978 311.3 265.623 349.433 C 344.628 383.04 465.548 340.101 500 300" />
+      </svg>
+    </div>
 
-      <!-- ABOUT ME section -->
-      <section class="about" id="about-me">
-        <div class="container">
-          <div class="about-me">
-            <h2 class="title">About Me</h2>
-            <div class="about-me-text">
-              Hey it's <span>Tchassi Jordan</span> here, a junior front end web
-              developer. Am a humble lad that uses his tech skills and position
-              to solve every day problems in order to create a better ecosystem
-              for the future. I love music, basketball, participating in
-              community events, tech talks and a lot more. Am equally a big fan
-              of remote work and life style.
-            </div>
-            <div class="about-me-skills-container">
-              <h3>Languages & Skills.</h3>
-              <div class="about-me-skills flex">
-                <div class="skill-set-section">
-                  <h4 class="skill-set-title">React & TypeScript</h4>
-                  <ul class="flex">
-                    <li class="skill-name">React 16.8+</li>
-                    <li class="skill-name">Next.js</li>
-                    <li class="skill-name">React Query</li>
-                  </ul>
-                </div>
-                <div class="skill-set-section">
-                  <h4 class="skill-set-title">Styles</h4>
-                  <ul class="flex">
-                    <li class="skill-name">Tailwind CSS</li>
-                    <li class="skill-name">CSS modules</li>
-                    <li class="skill-name">BootStrap</li>
-                  </ul>
-                </div>
-                <div class="skill-set-section">
-                  <h4 class="skill-set-title">Testing</h4>
-                  <ul class="flex">
-                    <li class="skill-name">JEST</li>
-                    <li class="skill-name">React Testing Library</li>
-                  </ul>
-                </div>
-                <div class="skill-set-section">
-                  <h4 class="skill-set-title">Firebase Services</h4>
-                  <ul class="flex">
-                    <li class="skill-name">Cloud Firestore</li>
-                    <li class="skill-name">Real time database</li>
-                    <li class="skill-name">Firebase Authentication</li>
-                  </ul>
-                </div>
-                <div class="skill-set-section">
-                  <h4 class="skill-set-title">Back end stacks & Databases</h4>
-                  <ul class="flex">
-                    <li class="skill-name">MySQL</li>
-                    <li class="skill-name">Java</li>
-                    <li class="skill-name">PHP</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="about-services" id="services">
-            <h2 class="title services-title">Services</h2>
-            <ol class="services-list">
-              <li>Converting website designs into functional websites</li>
-              <li>Designing & building responsive websites</li>
-              <li>Connecting front end UI to backend using REST APIs</li>
-              <li>Deliver dynamic websites using javascript</li>
-              <li>Building chrome extensions</li>
-            </ol>
-          </div>
-        </div>
-      </section>
-
-      <!-- ARTICLES section -->
-      <section class="article-c" id="articles">
-        <div class="container">
-          <h2 class="title articles-title">Articles</h2>
-          <p class="article-title-text">
-            I write on important features or topics on my coding journey.
-          </p>
-          <div class="articles">
-            <div class="article-item">
-              <a
-                href="https://dev.to/tchassi_jordan/how-to-create-a-carousel-in-react-js-4872"
-              >
-                <img
-                  class="article-item-image"
-                  src="./images/react-logo.png"
-                  alt="react logo"
-                />
-              </a>
-              <div class="article-item-description flex">
-                <h3 class="article-item-title">
-                  How to create a react carousel app
-                </h3>
-                <p class="article-item-text">
-                  In this article I simplified the process of creating your
-                  first react app, how to create a custom react hook. And
-                  equally using that hook to create a carousel app.
-                </p>
-                <a
-                  class="btn article-btn"
-                  href="https://dev.to/tchassi_jordan/how-to-create-a-carousel-in-react-js-4872"
-                  >View Article→</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- EVENTS section -->
-      <section class="event-c" id="events">
-        <div class="container">
-          <h2 class="title events-title">Events</h2>
-          <h4 class="events-subtitle">Featured Talks 🎤</h4>
-          <p class="events-subtitle-text">
-            Being the co-Lead of the
-            <a
-              href="https://gdsc.community.dev/yaounde-i-university/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Google Developer Student Club Yaoundé I</a
-            >, I participate in practical event/study jams we organize
-            practically every week on google technologies and equally the
-            trending technologies and topics in the tech industry.
-          </p>
-          <div class="events flex">
-            <div class="event-item">
-              <a
-                href="https://photos.google.com/share/AF1QipOmQA43xoI7PoCWqRdva-2eSJcttufTPsNZvZZbNSzwd2t6Xoc7CG-AjtFzfUcLUQ?key=TjBJaWFYNFFKRWUyOTZWMFRKMVFOa2owb0Z6ZmR3"
-              >
-                <img
-                  class="event-item-image"
-                  src="./images/git&github_flyer.jpg"
-                  alt="react logo"
-                />
-              </a>
-              <div class="event-item-description flex">
-                <h3 class="event-item-title">
-                  Practical discovery of Git & GitHub
-                </h3>
-                <p class="event-item-text">
-                  A purely practical event in which the other speakers and I
-                  talked about version control systems(notably Git), how to use
-                  GitHub.
-                </p>
-                <a
-                  class="btn gallery-btn"
-                  href="https://photos.google.com/share/AF1QipOmQA43xoI7PoCWqRdva-2eSJcttufTPsNZvZZbNSzwd2t6Xoc7CG-AjtFzfUcLUQ?key=TjBJaWFYNFFKRWUyOTZWMFRKMVFOa2owb0Z6ZmR3"
-                  >Event Gallery→</a
-                >
-              </div>
-            </div>
-            <div class="event-item grow">
-              <a href="https://photos.app.goo.gl/nNH2GCh1YApL6Fto9">
-                <img
-                  class="event-item-image"
-                  src="./images/Building_React_app_flyer.jpeg"
-                  alt="event flyer"
-                />
-              </a>
-              <div class="event-item-description flex">
-                <h3 class="event-item-title">
-                  Building modern UI using ReactJS
-                </h3>
-                <p class="event-item-text">
-                  A long this workshop I gave an introduction to ReactJS, how to
-                  think in React and building modern UI using React
-                </p>
-                <a
-                  class="btn gallery-btn"
-                  href="https://photos.app.goo.gl/nNH2GCh1YApL6Fto9"
-                  >Event Gallery→</a
-                >
-              </div>
-            </div>
-            <div class="event-item grow">
-              <a href="https://photos.app.goo.gl/nNH2GCh1YApL6Fto9">
-                <img
-                  class="event-item-image"
-                  src="./images/reDiscovery_Git&GitHub.jpg"
-                  alt="event flyer"
-                />
-              </a>
-              <div class="event-item-description flex">
-                <h3 class="event-item-title">
-                  Introduction to Git, GitHub & GitLab
-                </h3>
-                <p class="event-item-text">
-                  During this live coding session I taught novice developers how
-                  to use Git for version control, hosting their code on GitHub
-                  and GitLab
-                </p>
-                <a
-                  class="btn gallery-btn"
-                  href="https://photos.app.goo.gl/nNH2GCh1YApL6Fto9"
-                  >Event Gallery→</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="contact" id="contact">
-        <div class="container">
-          <h2 class="title contact-t">Contact Me</h2>
-          <p class="contact-text">
-            Contact me here for any hire or link up talk. I'll love to hear
-            about that awesome project you're trying to realize.
-          </p>
-          <a class="contact-btn btn" href="mailto:tchassijordan@gmail.com"
-            >Hire Me</a
-          >
-        </div>
-      </section>
-    </main>
-
-    <footer class="dark-f">
+    <!-- ABOUT ME section -->
+    <section class="about" id="about-me">
       <div class="container">
-        <ul class="icons-list flex">
-          <li>
-            <a href="https://www.linkedin.com/in/idriss-jordan"
-              ><i class="fab fa-linkedin"></i
-            ></a>
-          </li>
-          <li>
-            <a href="https://github.com/tchassijordan/"
-              ><i class="fab fa-github"></i
-            ></a>
-          </li>
-          <li>
-            <a href="https://twitter.com/tchassijordan"
-              ><i class="fab fa-twitter-square"></i
-            ></a>
-          </li>
-          <li>
-            <a href="https://dev.to/tchassi_jordan"
-              ><i class="fab fa-dev"></i
-            ></a>
-          </li>
-        </ul>
-        <div class="credits flex">
-          <p>Tchassi Jordan</p>
-          <p>Copyright 2022</p>
+        <div class="about-me">
+          <h2 class="title">About Me</h2>
+          <div class="about-me-text">
+            Hey it's <span>Tchassi Jordan</span> here, a junior front end web
+            developer. Am a humble lad that uses his tech skills and position
+            to solve every day problems in order to create a better ecosystem
+            for the future. I love music, basketball, participating in
+            community events, tech talks and a lot more. Am equally a big fan
+            of remote work and life style.
+          </div>
+          <div class="about-me-skills-container">
+            <h3>Languages & Skills.</h3>
+            <div class="about-me-skills flex">
+              <div class="skill-set-section">
+                <h4 class="skill-set-title">React & TypeScript</h4>
+                <ul class="flex">
+                  <li class="skill-name">React 16.8+</li>
+                  <li class="skill-name">Next.js</li>
+                  <li class="skill-name">React Query</li>
+                </ul>
+              </div>
+              <div class="skill-set-section">
+                <h4 class="skill-set-title">Styles</h4>
+                <ul class="flex">
+                  <li class="skill-name">Tailwind CSS</li>
+                  <li class="skill-name">CSS modules</li>
+                  <li class="skill-name">BootStrap</li>
+                </ul>
+              </div>
+              <div class="skill-set-section">
+                <h4 class="skill-set-title">Testing</h4>
+                <ul class="flex">
+                  <li class="skill-name">JEST</li>
+                  <li class="skill-name">React Testing Library</li>
+                </ul>
+              </div>
+              <div class="skill-set-section">
+                <h4 class="skill-set-title">Firebase Services</h4>
+                <ul class="flex">
+                  <li class="skill-name">Cloud Firestore</li>
+                  <li class="skill-name">Real time database</li>
+                  <li class="skill-name">Firebase Authentication</li>
+                </ul>
+              </div>
+              <div class="skill-set-section">
+                <h4 class="skill-set-title">Back end stacks & Databases</h4>
+                <ul class="flex">
+                  <li class="skill-name">MySQL</li>
+                  <li class="skill-name">Java</li>
+                  <li class="skill-name">PHP</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-services" id="services">
+          <h2 class="title services-title">Services</h2>
+          <ol class="services-list">
+            <li>Converting website designs into functional websites</li>
+            <li>Designing & building responsive websites</li>
+            <li>Connecting front end UI to backend using REST APIs</li>
+            <li>Deliver dynamic websites using javascript</li>
+            <li>Building chrome extensions</li>
+          </ol>
         </div>
       </div>
-    </footer>
+    </section>
 
-    <script src="./javascript/index.js"></script>
-  </body>
+    <!-- ARTICLES section -->
+    <section class="article-c" id="articles">
+      <div class="container">
+        <h2 class="title articles-title">Articles</h2>
+        <p class="article-title-text">
+          I write on important features or topics on my coding journey.
+        </p>
+        <div class="articles">
+          <div class="article-item">
+            <a href="https://dev.to/tchassi_jordan/how-to-create-a-carousel-in-react-js-4872">
+              <img class="article-item-image" src="./images/react-logo.png" alt="react logo" />
+            </a>
+            <div class="article-item-description flex">
+              <h3 class="article-item-title">
+                How to create a react carousel app
+              </h3>
+              <p class="article-item-text">
+                In this article I simplified the process of creating your
+                first react app, how to create a custom react hook. And
+                equally using that hook to create a carousel app.
+              </p>
+              <a class="btn article-btn"
+                href="https://dev.to/tchassi_jordan/how-to-create-a-carousel-in-react-js-4872">View Article→</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EVENTS section -->
+    <section class="event-c" id="events">
+      <div class="container">
+        <h2 class="title events-title">Events</h2>
+        <h4 class="events-subtitle">Featured Talks 🎤</h4>
+        <p class="events-subtitle-text">
+          Being the co-Lead of the
+          <a href="https://gdsc.community.dev/yaounde-i-university/" target="_blank" rel="noopener noreferrer">Google
+            Developer Student Club Yaoundé I</a>, I participate in practical event/study jams we organize
+          practically every week on google technologies and equally the
+          trending technologies and topics in the tech industry.
+        </p>
+        <div class="events flex">
+          <div class="event-item">
+            <a
+              href="https://photos.google.com/share/AF1QipOmQA43xoI7PoCWqRdva-2eSJcttufTPsNZvZZbNSzwd2t6Xoc7CG-AjtFzfUcLUQ?key=TjBJaWFYNFFKRWUyOTZWMFRKMVFOa2owb0Z6ZmR3">
+              <img class="event-item-image" src="./images/git&github_flyer.jpg" alt="react logo" />
+            </a>
+            <div class="event-item-description flex">
+              <h3 class="event-item-title">
+                Practical discovery of Git & GitHub
+              </h3>
+              <p class="event-item-text">
+                A purely practical event in which the other speakers and I
+                talked about version control systems(notably Git), how to use
+                GitHub.
+              </p>
+              <a class="btn gallery-btn"
+                href="https://photos.google.com/share/AF1QipOmQA43xoI7PoCWqRdva-2eSJcttufTPsNZvZZbNSzwd2t6Xoc7CG-AjtFzfUcLUQ?key=TjBJaWFYNFFKRWUyOTZWMFRKMVFOa2owb0Z6ZmR3">Event
+                Gallery→</a>
+            </div>
+          </div>
+          <div class="event-item grow">
+            <a href="https://photos.app.goo.gl/nNH2GCh1YApL6Fto9">
+              <img class="event-item-image" src="./images/Building_React_app_flyer.jpeg" alt="event flyer" />
+            </a>
+            <div class="event-item-description flex">
+              <h3 class="event-item-title">
+                Building modern UI using ReactJS
+              </h3>
+              <p class="event-item-text">
+                A long this workshop I gave an introduction to ReactJS, how to
+                think in React and building modern UI using React
+              </p>
+              <a class="btn gallery-btn" href="https://photos.app.goo.gl/nNH2GCh1YApL6Fto9">Event Gallery→</a>
+            </div>
+          </div>
+          <div class="event-item grow">
+            <a href="https://photos.app.goo.gl/nNH2GCh1YApL6Fto9">
+              <img class="event-item-image" src="./images/reDiscovery_Git&GitHub.jpg" alt="event flyer" />
+            </a>
+            <div class="event-item-description flex">
+              <h3 class="event-item-title">
+                Introduction to Git, GitHub & GitLab
+              </h3>
+              <p class="event-item-text">
+                During this live coding session I taught novice developers how
+                to use Git for version control, hosting their code on GitHub
+                and GitLab
+              </p>
+              <a class="btn gallery-btn" href="https://photos.app.goo.gl/nNH2GCh1YApL6Fto9">Event Gallery→</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <h2 class="title contact-t">Contact Me</h2>
+        <p class="contact-text">
+          Contact me here for any hire or link up talk. I'll love to hear
+          about that awesome project you're trying to realize.
+        </p>
+        <a class="contact-btn btn" href="mailto:tchassijordan@gmail.com">Hire Me</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="dark-f">
+    <div class="container">
+      <ul class="icons-list flex">
+        <li>
+          <a href="https://www.linkedin.com/in/idriss-jordan"><i class="fab fa-linkedin"></i></a>
+        </li>
+        <li>
+          <a href="https://github.com/tchassijordan/"><i class="fab fa-github"></i></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/tchassijordan"><i class="fab fa-twitter-square"></i></a>
+        </li>
+        <li>
+          <a href="https://dev.to/tchassi_jordan"><i class="fab fa-dev"></i></a>
+        </li>
+      </ul>
+      <div class="credits flex">
+        <p>Tchassi Jordan</p>
+        <p>Copyright 2022</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./javascript/index.js"></script>
+</body>
+
 </html>
